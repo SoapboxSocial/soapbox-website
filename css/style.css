@@ -16,6 +16,7 @@ p {
 a, a:link, a:visited, a:active {
     cursor: pointer;
     color: #8359FE;
+    text-decoration: none;
 }
 
 /* mouse over link */
