@@ -22,3 +22,8 @@ a, a:link, a:visited, a:active {
 a:hover {
     color: #AA8BFF;
 }
+
+.testflight {
+    height: 1rem;
+    /*vertical-align:middle;*/
+}
