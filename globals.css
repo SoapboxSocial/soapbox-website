@@ -1,0 +1,172 @@
+:root {
+  --background: #f2f2f7;
+  --brand: #8359fe;
+  --white: #fff;
+  --black: #000;
+  --systemGrey6: #f2f2f7;
+  --textPrimary: #000;
+  --roomBackground: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #000;
+    --systemGrey6: #1c1c1e;
+    --textPrimary: #fff;
+    --roomBackground: #1c1c1e;
+  }
+}
+
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --brand: color(display-p3 0.5137 0.349 0.9961);
+  }
+}
+
+@font-face {
+  font-family: "SF Rounded Pro";
+  src: url(/SFRounded-Semibold.woff2) format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SF Rounded Pro";
+  src: url(/SFRounded-Bold.woff2) format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--background);
+}
+
+@media screen and (min-width: 54em) {
+  html {
+    font-size: 20px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 30em;
+  margin: 0 auto;
+}
+
+.main {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin: 0;
+}
+
+.summary {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  text-align: center;
+  margin: 2rem 0;
+  color: var(--textPrimary);
+}
+
+.button {
+  padding: 0.75rem;
+  border-radius: 0.9375rem;
+  line-height: 2.5rem;
+  text-align: center;
+  border: none;
+  width: 100%;
+  white-space: nowrap;
+  font-family: inherit;
+  font-size: 1.75rem;
+  font-weight: 600;
+  appearance: none;
+  letter-spacing: 0.0225rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background-color: var(--brand);
+}
+
+@media screen and (min-width: 32em) {
+  .button {
+    width: auto;
+    padding: 0.75rem 1.875rem;
+  }
+}
+
+.room {
+  width: 100%;
+  padding: 1.25rem;
+  border-radius: 1.85rem;
+  background-color: var(--roomBackground);
+  font-family: "SF Rounded Pro", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+}
+
+.room-title {
+  font-weight: bold;
+  font-size: 1.375rem;
+  line-height: 1.27rem;
+  letter-spacing: 0.021875rem;
+  color: var(--textPrimary);
+  margin-bottom: 1.875rem;
+}
+
+.room-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.room-users > :not(template) ~ :not(template) {
+  margin-left: -0.5rem;
+}
+
+.room-head {
+  width: 2.5rem;
+  height: 2.5rem;
+  vertical-align: middle;
+  border-radius: 99999px;
+  box-shadow: 0 0 0 0.25rem var(--roomBackground);
+}
+
+.room-button {
+  padding: 0.5rem 1.25rem;
+  background: var(--brand);
+  border-radius: 0.9375rem;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.02375rem;
+  color: var(--white);
+}
