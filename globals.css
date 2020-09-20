@@ -68,19 +68,23 @@ a {
   box-sizing: inherit;
 }
 
-.container {
-  max-width: 30em;
-  margin: 0 auto;
+body {
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
 }
 
 .main {
   padding: 20px;
   flex: 1;
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 30em;
+  margin: 0 auto;
 }
 
 p {
@@ -169,4 +173,24 @@ p {
   text-align: center;
   letter-spacing: 0.02375rem;
   color: var(--white);
+}
+
+footer {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.twitter {
+  color: #1da1f2;
+  height: 2rem;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+  width: 2rem;
+}
+
+.twitter img {
+  width: 1.5rem;
+  height: 1.5rem;
 }
