@@ -68,6 +68,10 @@ a {
   box-sizing: inherit;
 }
 
+html {
+  height: -webkit-fill-available;
+}
+
 body {
   min-height: 100vh;
   /* mobile viewport bug fix */
