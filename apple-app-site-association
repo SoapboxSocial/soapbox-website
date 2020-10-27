@@ -17,8 +17,5 @@ permalink: .well-known/apple-app-site-association
              ]
            }
        ]
-   },
-   "webcredentials": {
-      "apps": [ "Z9LC5GZ33U.app.social.soapbox" ]
-   },
+   }
 }
