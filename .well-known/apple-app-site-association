@@ -1,0 +1,18 @@
+{
+  "applinks": {
+      "details": [
+           {
+             "appIDs": [ "Z9LC5GZ33U.app.social.soapbox" ],
+             "components": [
+               {
+                  "/": "/login-pin",
+                  "comment": "Matches any URL whose path is /login-pin"
+               }
+             ]
+           }
+       ]
+   },
+   "webcredentials": {
+      "apps": [ "Z9LC5GZ33U.app.social.soapbox" ]
+   },
+}
