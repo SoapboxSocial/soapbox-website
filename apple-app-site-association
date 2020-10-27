@@ -11,6 +11,7 @@ permalink: .well-known/apple-app-site-association
              "components": [
                {
                   "/": "/login-pin",
+                  "?": { "pin": "??????" },
                   "comment": "Matches any URL whose path is /login-pin"
                }
              ]
