@@ -9,6 +9,12 @@ export default function Footer() {
 
       <div className="flex space-x-4">
         <p>
+          <a href="https://www.notion.so/Media-Kit-f122893891b84cb5a19a8744b770f847">
+            Media Kit
+          </a>
+        </p>
+
+        <p>
           <Link href="/privacy">
             <a>Privacy</a>
           </Link>
