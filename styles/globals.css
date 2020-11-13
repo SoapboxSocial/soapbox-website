@@ -69,8 +69,20 @@ a {
   box-sizing: inherit;
 }
 
+html,
+body {
+  height: -webkit-fill-available;
+}
+
+#__next {
+  height: 100%;
+}
+
 .wrapper {
   min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
+
   display: flex;
   flex-direction: column;
 }
