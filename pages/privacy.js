@@ -1,7 +1,11 @@
+import PrivacyPolicy from "../legal/privacy.mdx";
+
 export default function Privacy() {
   return (
-    <div className="main is-wide">
-      <h1>Privacy</h1>
-    </div>
+    <main className="main is-wide">
+      <div className="legal">
+        <PrivacyPolicy />
+      </div>
+    </main>
   );
 }

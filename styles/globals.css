@@ -213,3 +213,23 @@ footer a {
   width: 1.5rem;
   height: 1.5rem;
 }
+
+.legal p {
+  margin-bottom: 1em;
+}
+
+.legal li {
+  margin-bottom: 1em;
+}
+
+.legal ol {
+  list-style-type: decimal;
+}
+
+.legal ol ol {
+  list-style-type: lower-alpha;
+}
+
+.legal ol ol ol {
+  list-style-type: lower-roman;
+}

@@ -1,7 +1,11 @@
+import EndUserLicenseAgreement from "../legal/eula.mdx";
+
 export default function EULA() {
   return (
-    <div className="main is-wide">
-      <h1>EULA</h1>
-    </div>
+    <main className="main is-wide">
+      <div className="legal">
+        <EndUserLicenseAgreement />
+      </div>
+    </main>
   );
 }
