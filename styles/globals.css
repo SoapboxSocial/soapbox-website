@@ -49,6 +49,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--background);
+  color: var(--textPrimary);
 }
 
 @media screen and (min-width: 54em) {
@@ -68,27 +69,30 @@ a {
   box-sizing: inherit;
 }
 
-html {
-  height: -webkit-fill-available;
-}
-
-body {
+.wrapper {
   min-height: 100vh;
-  /* mobile viewport bug fix */
-  min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
+}
+
+.flex {
+  display: flex;
 }
 
 .main {
   padding: 20px;
   flex: 1;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   max-width: 30em;
   margin: 0 auto;
+}
+
+.main.is-wide {
+  max-width: 48em;
 }
 
 p {
@@ -181,9 +185,20 @@ p {
 
 footer {
   padding: 20px;
+  max-width: 30em;
+  margin: 0 auto;
+  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+footer a {
+  color: var(--textPrimary);
+}
+
+.space-x-4 > * + * {
+  margin-left: 1rem;
 }
 
 .twitter {
@@ -197,4 +212,24 @@ footer {
 .twitter img {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+.legal p {
+  margin-bottom: 1em;
+}
+
+.legal li {
+  margin-bottom: 1em;
+}
+
+.legal ol {
+  list-style-type: decimal;
+}
+
+.legal ol ol {
+  list-style-type: lower-alpha;
+}
+
+.legal ol ol ol {
+  list-style-type: lower-roman;
 }
