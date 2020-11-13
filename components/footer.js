@@ -21,8 +21,8 @@ export default function Footer() {
         </p>
 
         <p>
-          <Link href="/eula">
-            <a>EULA</a>
+          <Link href="/terms">
+            <a>Terms</a>
           </Link>
         </p>
       </div>
