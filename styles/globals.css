@@ -49,7 +49,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: var(--background);
-  color: var(--white);
+  color: var(--textPrimary);
 }
 
 @media screen and (min-width: 54em) {
@@ -194,7 +194,7 @@ footer {
 }
 
 footer a {
-  color: var(--white);
+  color: var(--textPrimary);
 }
 
 .space-x-4 > * + * {
