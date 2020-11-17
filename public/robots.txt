@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Host: https://soapbox.social
+Sitemap: https://soapbox.social/sitemap.xml
