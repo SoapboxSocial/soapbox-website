@@ -6,7 +6,7 @@ export default function Header() {
       <nav className="flex justify-center">
         <Link href="/">
           <a>
-            <img className="brand-mark" src="/icon.svg" alt="Soapbox" />
+            <img className="brand-mark" src="/brand.png" alt="Soapbox" />
           </a>
         </Link>
       </nav>

@@ -1,4 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import { jsonLdScriptProps } from "react-schemaorg";
 
 export default class SoapboxDocument extends Document {
   render() {
@@ -73,6 +74,26 @@ export default class SoapboxDocument extends Document {
           <meta
             name="twitter:image"
             content="https://soapbox.social/thumb.jpg"
+          />
+
+          {/* Structured Text */}
+          <script
+            {...jsonLdScriptProps({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Soapbox",
+              url: "https://soapbox.social",
+              logo: "https://soapbox.social/brand.png",
+            })}
+          />
+          <script
+            {...jsonLdScriptProps({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: "Soapbox: Talk with anyone",
+              operatingSystem: "iOS",
+              applicationCategory: "SocialNetworkingApplication",
+            })}
           />
         </Head>
         <body>
