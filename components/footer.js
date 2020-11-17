@@ -15,7 +15,9 @@ export default function Footer() {
         </p>
 
         <p>
-          <a href="mailto:support@soapbox.social">Support</a>
+          <Link href="/support">
+            <a>Support</a>
+          </Link>
         </p>
 
         <p>
