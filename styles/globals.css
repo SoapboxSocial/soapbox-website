@@ -91,6 +91,22 @@ body {
   display: flex;
 }
 
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.brand-mark {
+  height: 4rem;
+}
+
+.header {
+  margin-top: 2rem;
+}
+
 .main {
   padding: 20px;
   flex: 1;
@@ -147,8 +163,8 @@ p {
 }
 
 .badge {
-  height: 80px;
-  width: 240px;
+  height: 4rem;
+  width: 12rem;
   background-image: url("/badge_black.svg");
   background-repeat: no-repeat;
   background-size: cover;
