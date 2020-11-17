@@ -31,7 +31,7 @@ export default function Home() {
             />
           </div>
           <a
-            href="https://testflight.apple.com/join/Iyatu5cO"
+            href="https://apps.apple.com/us/app/soapbox-talk-with-anyone/id1529283270"
             className="room-button"
           >
             Join in
@@ -44,9 +44,11 @@ export default function Home() {
         friends.
       </p>
 
-      <a className="button" href="https://testflight.apple.com/join/Iyatu5cO">
-        Available on TestFlight
-      </a>
+      <a
+        className="badge"
+        href="https://apps.apple.com/us/app/soapbox-talk-with-anyone/id1529283270"
+        aria-label="Download on the App Store"
+      />
     </main>
   );
 }

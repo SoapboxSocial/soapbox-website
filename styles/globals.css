@@ -146,6 +146,21 @@ p {
   }
 }
 
+.badge {
+  height: 80px;
+  width: 240px;
+  background-image: url("/badge_black.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .badge {
+    background-image: url("/badge_white.svg");
+  }
+}
+
 .room {
   width: 100%;
   padding: 1.25rem;
