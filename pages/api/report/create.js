@@ -46,6 +46,7 @@ ${what}
         repo: "reports",
         title: title,
         body: markdown,
+        assignees: ["mirshko", "decanus"],
       }
     );
 
