@@ -32,6 +32,8 @@ export default function Incident() {
 
   return (
     <main className="main">
+      <h1>Report An Incident</h1>
+
       <form method="POST" onSubmit={handleSubmit(onSubmit)}>
         {/* Hidden */}
         <input
@@ -53,8 +55,10 @@ export default function Incident() {
           hidden
         />
 
-        <div>
-          <label htmlFor="email">Your email address</label>
+        <div className="mb-6">
+          <label htmlFor="email" className="mb-4">
+            Your email address
+          </label>
           <input
             type="email"
             autoComplete="email"
@@ -65,8 +69,10 @@ export default function Incident() {
           />
         </div>
 
-        <div>
-          <label htmlFor="name">Your name</label>
+        <div className="mb-6">
+          <label htmlFor="name" className="mb-4">
+            Your name
+          </label>
           <input
             type="text"
             autoComplete="name"
@@ -77,8 +83,10 @@ export default function Incident() {
           />
         </div>
 
-        <div>
-          <label htmlFor="what">What violated our rules?</label>
+        <div className="mb-6">
+          <label htmlFor="what" className="mb-4">
+            What violated our rules?
+          </label>
           <select name="what" id="what" ref={register} required>
             <option value="" selected>
               -
@@ -91,8 +99,10 @@ export default function Incident() {
           </select>
         </div>
 
-        <div>
-          <label htmlFor="subject">Subject</label>
+        <div className="mb-6">
+          <label htmlFor="subject" className="mb-4">
+            Subject
+          </label>
           <input
             type="text"
             name="subject"
@@ -103,27 +113,22 @@ export default function Incident() {
           />
         </div>
 
-        <div>
-          <label htmlFor="details">
+        <div className="mb-6">
+          <label htmlFor="details" className="mb-4">
             Give us details about the incident or issue
           </label>
           <textarea
             name="details"
             id="details"
             autoComplete="off"
-            cols="30"
-            rows="10"
+            rows="5"
             ref={register}
             required
           />
         </div>
 
-        <div>
-          <label htmlFor="reportIsCorrect">
-            <span>
-              I confirm that this incident report is true and correct and an
-              inappropriate or false report is a violation.
-            </span>
+        <div className="mb-6">
+          <label className="checkbox" htmlFor="reportIsCorrect">
             <input
               type="checkbox"
               name="reportIsCorrect"
@@ -131,14 +136,16 @@ export default function Incident() {
               ref={register}
               required
             />
+            <span>
+              I confirm that this incident report is true and correct and an
+              inappropriate or false report is a violation.
+            </span>
           </label>
         </div>
 
-        <div>
-          <button type="submit" disabled={isSubmitting}>
-            Submit
-          </button>
-        </div>
+        <button className="button" type="submit" disabled={isSubmitting}>
+          Submit
+        </button>
       </form>
     </main>
   );
