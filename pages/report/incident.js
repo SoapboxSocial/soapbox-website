@@ -5,6 +5,7 @@ export default function Incident() {
   const { query } = useRouter();
   const userId = query.userId;
   const reportedUserId = query.reportedUserId;
+  const reportedGroupId = query.reportedGroupId;
 
   const { register, handleSubmit, formState, reset } = useForm();
 
@@ -55,6 +56,16 @@ export default function Incident() {
           hidden
         />
 
+        {/* Hidden */}
+        <input
+          type="text"
+          name="reportedGroupId"
+          id="reportedGroupId"
+          ref={register}
+          defaultValue={reportedGroupId}
+          hidden
+        />
+
         <div className="mb-6">
           <label htmlFor="email" className="mb-4">
             Your email address
@@ -92,6 +103,7 @@ export default function Incident() {
               -
             </option>
             <option value="Room title">Room title</option>
+            <option value="Group name">Group name</option>
             <option value="Conversation topic">Conversation topic</option>
             <option value="Comment by a speaker">Comment by a speaker</option>
             <option value="Profile photo">Profile photo</option>

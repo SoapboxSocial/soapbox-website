@@ -10,6 +10,7 @@ export default async (req, res) => {
     const email = report?.email || "No Email";
 
     const reportedUserId = report?.reportedUserId || "No Reported User";
+    const reportedGroupId = report?.reportedGroupId || "No Reported Group";
 
     const title = `${subject} (${name})`;
 
@@ -25,6 +26,7 @@ export default async (req, res) => {
 - **Email**: ${email}
 
 - **Reported User ID**: ${reportedUserId}
+- **Reported Group ID**: ${reportedGroupId}
 
 ## Subject
 
