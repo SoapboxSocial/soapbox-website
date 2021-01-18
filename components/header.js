@@ -1,14 +1,18 @@
 import Link from "next/link";
 
-export default function Header() {
+export default function Header({ isNavigable = true }) {
   return (
     <header className="header">
       <nav className="flex justify-center">
-        <Link href="/">
-          <a>
-            <img className="brand-mark" src="/brand.png" alt="Soapbox" />
-          </a>
-        </Link>
+        {isNavigable ? (
+          <Link href="/">
+            <a>
+              <img className="brand-mark" src="/brand.png" alt="Soapbox" />
+            </a>
+          </Link>
+        ) : (
+          <img className="brand-mark" src="/brand.png" alt="Soapbox" />
+        )}
       </nav>
     </header>
   );
