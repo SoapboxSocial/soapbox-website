@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import Page from "../../components/page";
 
 export default function Incident() {
-  const { query, push } = useRouter();
+  const { query } = useRouter();
   const userId = query.userId;
   const reportedUserId = query.reportedUserId;
   const reportedGroupId = query.reportedGroupId;
@@ -23,7 +23,7 @@ export default function Incident() {
         },
       });
 
-      push("/report/received");
+      window.location.replace("/report/received");
     } catch (error) {
       console.error(error);
       window.alert("Something went wrong submitting your report");
