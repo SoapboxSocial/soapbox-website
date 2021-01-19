@@ -9,23 +9,28 @@ export default function UserPage() {
       </Head>
 
       <main className="main">
-        <div className="space-y-4">
-          <img
-            alt="Dean"
-            src="/dean.png"
-            className="rounded-full h-24 w-24 mx-auto"
-            draggable="false"
-          />
-
+        <div className="space-y-8">
           <div className="text-center">
-            <h1 className="text-3xl font-medium">Dean</h1>
+            <img
+              alt="Dean"
+              src="/dean.png"
+              className="rounded-full h-24 w-24 mx-auto mb-4"
+              draggable="false"
+            />
+
+            <h1 className="text-2xl leading-tight font-bold">Dean</h1>
 
             <p className="text-lg text-black opacity-50">@dean</p>
           </div>
 
-          <a href="" className="button">
-            Follow
-          </a>
+          <div className="text-center">
+            <a
+              href=""
+              className="inline-flex px-6 py-2 text-xl font-medium rounded-full bg-brand text-white"
+            >
+              Follow
+            </a>
+          </div>
         </div>
       </main>
     </Page>
