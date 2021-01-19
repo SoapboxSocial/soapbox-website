@@ -2,14 +2,14 @@ import Head from "next/head";
 import Page from "../components/page";
 import Room from "../components/room";
 
-export default function Home() {
+export default function HomePage() {
   return (
     <Page>
-      <main className="main">
-        <Head>
-          <title>Soapbox</title>
-        </Head>
+      <Head>
+        <title>Soapbox</title>
+      </Head>
 
+      <main className="main">
         <Room roomName="Soapbox" buttonText="Join in" />
 
         <p className="summary">

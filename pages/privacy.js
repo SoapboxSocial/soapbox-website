@@ -5,11 +5,11 @@ import PrivacyPolicy from "../legal/privacy.mdx";
 export default function PrivacyPage() {
   return (
     <Page>
-      <main className="main is-wide">
-        <Head>
-          <title>Mobile App Privacy Policy</title>
-        </Head>
+      <Head>
+        <title>Mobile App Privacy Policy</title>
+      </Head>
 
+      <main className="main is-wide">
         <div className="legal">
           <PrivacyPolicy />
         </div>

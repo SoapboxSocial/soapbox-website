@@ -11,7 +11,10 @@ export default function Header({ isNavigable = true, isWide = true }) {
             </a>
           </Link>
 
-          <a href="#!" className="room-button">
+          <a
+            href="https://apps.apple.com/us/app/soapbox-talk-with-anyone/id1529283270"
+            className="room-button"
+          >
             App Store
           </a>
         </nav>
