@@ -10,7 +10,7 @@ export default function Home() {
           <title>Soapbox</title>
         </Head>
 
-        <Room />
+        <Room roomName="Soapbox" buttonText="Join in" />
 
         <p className="summary">
           A drop-in audio chat app to have casual conversations with strangers
