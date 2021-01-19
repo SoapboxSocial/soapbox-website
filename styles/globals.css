@@ -28,14 +28,14 @@
   --roomBackground: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #000;
     --systemGrey6: #1c1c1e;
     --textPrimary: #fff;
     --roomBackground: #1c1c1e;
   }
-}
+} */
 
 @supports (color: color(display-p3 1 1 1)) {
   :root {
@@ -59,10 +59,6 @@ body {
 
 .brand-mark {
   height: 4rem;
-}
-
-.header {
-  margin-top: 2rem;
 }
 
 .main {
@@ -125,11 +121,11 @@ body {
   background-position: center;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   .badge {
     background-image: url("/badge_white.svg");
   }
-}
+} */
 
 .room {
   width: 100%;
@@ -169,10 +165,6 @@ body {
   text-align: center;
   letter-spacing: 0.02375rem;
   color: var(--white);
-}
-
-footer {
-  max-width: 30em;
 }
 
 footer a {
