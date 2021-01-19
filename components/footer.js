@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="flex">
+    <footer className="flex items-center justify-between mx-auto w-full p-6">
       <a className="twitter" href="https://twitter.com/joinsoapbox">
         <img src="/twitter.svg" alt="Twitter" />
       </a>

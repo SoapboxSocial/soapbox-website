@@ -1,6 +1,6 @@
 import Page from "../components/page";
 
-export default function LoginPin() {
+export default function LoginPinPage() {
   return (
     <Page>
       <main className="main">

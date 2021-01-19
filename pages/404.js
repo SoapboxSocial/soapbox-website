@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Page from "../components/page";
 
-export default function Custom404() {
+export default function Custom404Page() {
   return (
     <Page>
       <main className="main">

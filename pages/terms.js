@@ -2,7 +2,7 @@ import Head from "next/head";
 import Page from "../components/page";
 import EndUserLicenseAgreement from "../legal/eula.mdx";
 
-export default function EULA() {
+export default function TermsPage() {
   return (
     <Page>
       <main className="main is-wide">

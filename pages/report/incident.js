@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
 import Page from "../../components/page";
 
-export default function Incident() {
+export default function IncidentPage() {
   const { query } = useRouter();
   const userId = query.userId;
   const reportedUserId = query.reportedUserId;

@@ -1,6 +1,6 @@
 import Page from "../../components/page";
 
-export default function Received() {
+export default function ReceivedPage() {
   return (
     <Page>
       <main className="main">

@@ -4,7 +4,7 @@ import { jsonLdScriptProps } from "react-schemaorg";
 export default class SoapboxDocument extends Document {
   render() {
     return (
-      <Html lang="en">
+      <Html lang="en" className="text-base sm:text-xl">
         <Head>
           <link
             rel="preload"

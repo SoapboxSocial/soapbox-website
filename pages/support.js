@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Page from "../components/page";
 
-export default function Support() {
+export default function SupportPage() {
   return (
     <Page>
       <main className="main">
