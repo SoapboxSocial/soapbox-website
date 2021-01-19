@@ -10,22 +10,26 @@ export default function UserPage() {
 
       <main className="main">
         <div className="space-y-8">
-          <div className="text-center">
+          <div className="text-center space-y-4">
             <img
               alt="Dean"
               src="/dean.png"
-              className="rounded-full h-24 w-24 mx-auto mb-4"
+              className="rounded-full h-24 w-24 mx-auto"
               draggable="false"
             />
 
-            <h1 className="text-2xl leading-tight font-bold">Dean</h1>
+            <div>
+              <h1 className="text-2xl leading-tight font-bold">Dean</h1>
 
-            <p className="text-lg text-black opacity-50">@dean</p>
+              <p className="text-md text-black opacity-50">@dean</p>
+            </div>
+
+            <p>i built this 👷🏽‍♂️</p>
           </div>
 
           <div className="text-center">
             <a
-              href=""
+              href="#!"
               className="inline-flex px-6 py-2 text-xl font-medium rounded-full bg-brand text-white"
             >
               Follow
