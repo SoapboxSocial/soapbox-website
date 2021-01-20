@@ -13,5 +13,11 @@ module.exports = {
       },
     ],
   },
-  exclude: ["/login-pin", "/report/incident", "/report/received", "/room/*"],
+  exclude: [
+    "/login-pin",
+    "/report/incident",
+    "/report/received",
+    "/room/*",
+    "/room",
+  ],
 };
