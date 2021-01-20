@@ -15,6 +15,7 @@ export default function RoomPage({
       <main className="main">
         <Room
           buttonText="Join in"
+          buttonLink={`soapbox://room?id=${room.id}`}
           roomName={room.name}
           roomMembers={room.members}
         />
@@ -39,7 +40,8 @@ type Group = {
 };
 
 type Data = {
-  group: Group;
+  name: string;
+  group?: Group;
   id: number;
   members: Member[];
 };

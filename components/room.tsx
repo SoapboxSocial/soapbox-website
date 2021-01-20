@@ -1,6 +1,9 @@
+import { APP_STORE_URL } from "../constants";
+
 export default function Room({
   roomName = "Join in the conversation",
   buttonText = "Get the app",
+  buttonLink = APP_STORE_URL,
   roomMembers = [
     {
       displayName: "Dean",
@@ -21,7 +24,7 @@ export default function Room({
       <div className="room-title">{roomName}</div>
       <div className="flex items-center justify-between">
         <div className="flex -space-x-2">
-          {roomMembers.map((member, i) => (
+          {roomMembers.slice(0, 3).map((member, i) => (
             <img
               key={i}
               className="room-head"
@@ -31,10 +34,7 @@ export default function Room({
             />
           ))}
         </div>
-        <a
-          href="https://apps.apple.com/us/app/soapbox-talk-with-anyone/id1529283270"
-          className="room-button"
-        >
+        <a href={buttonLink} className="room-button">
           {buttonText}
         </a>
       </div>
