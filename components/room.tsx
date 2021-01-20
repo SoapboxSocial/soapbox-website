@@ -34,7 +34,10 @@ export default function Room({
             />
           ))}
         </div>
-        <a href={buttonLink} className="room-button">
+        <a
+          href={buttonLink}
+          className="room-button focus:outline-none focus:ring-4"
+        >
           {buttonText}
         </a>
       </div>

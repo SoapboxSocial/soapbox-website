@@ -5,17 +5,17 @@ export default function Header({
 }: {
   isNavigable?: boolean;
 }) {
+  const icon = <img className="brand-mark" src="/brand.png" alt="Soapbox" />;
+
   return (
     <header className="mt-8">
       <nav className="flex justify-center">
         {isNavigable ? (
           <Link href="/">
-            <a>
-              <img className="brand-mark" src="/brand.png" alt="Soapbox" />
-            </a>
+            <a className="focus:outline-none focus:ring-4 rounded">{icon}</a>
           </Link>
         ) : (
-          <img className="brand-mark" src="/brand.png" alt="Soapbox" />
+          icon
         )}
       </nav>
     </header>

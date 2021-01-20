@@ -18,7 +18,7 @@ export default function HomePage() {
         </p>
 
         <a
-          className="py-4 px-6 bg-brand text-white rounded-full inline-flex items-center space-x-4"
+          className="py-4 px-6 bg-brand text-white rounded-full inline-flex items-center space-x-3 focus:outline-none focus:ring-4 transition-transform transform-gpu hover:scale-105"
           href={APP_STORE_URL}
           aria-label="Download on the App Store"
         >
