@@ -16,6 +16,10 @@
           {
             "/": "/room",
             "comment": "Matches any URL whose path is /room"
+          },
+          {
+            "/": "/user/*",
+            "comment": "Matches any URL whose path is /user/*"
           }
         ]
       }
