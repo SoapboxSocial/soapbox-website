@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Page from "../components/page";
+import { CONTACT_URL } from "../constants";
 
 export default function SupportPage() {
   return (
@@ -13,7 +14,7 @@ export default function SupportPage() {
 
         <p className="summary">Get help from the Soapbox Team.</p>
 
-        <a className="button" href="mailto:support@soapbox.social">
+        <a className="button" href={CONTACT_URL}>
           Contact us
         </a>
       </main>

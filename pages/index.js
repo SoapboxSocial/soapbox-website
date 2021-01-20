@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Page from "../components/page";
 import Room from "../components/room";
+import { APP_STORE_URL } from "../constants";
 
 export default function HomePage() {
   return (
@@ -19,7 +20,7 @@ export default function HomePage() {
 
         <a
           className="badge"
-          href="https://apps.apple.com/us/app/soapbox-talk-with-anyone/id1529283270"
+          href={APP_STORE_URL}
           aria-label="Download on the App Store"
         />
       </main>

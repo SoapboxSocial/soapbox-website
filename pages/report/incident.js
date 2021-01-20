@@ -8,7 +8,7 @@ export default function IncidentPage() {
   const reportedUserId = query.reportedUserId;
   const reportedGroupId = query.reportedGroupId;
 
-  const { register, handleSubmit, formState, reset } = useForm();
+  const { register, handleSubmit, formState } = useForm();
 
   const { isSubmitting } = formState;
 
