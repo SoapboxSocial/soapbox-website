@@ -2,7 +2,6 @@ import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Image from "next/image";
 import { Fragment } from "react";
 import Meta from "../../components/meta";
-import Page from "../../components/page";
 import { APP_ID, APP_NAME } from "../../constants";
 
 export default function UserPage({
@@ -13,7 +12,7 @@ export default function UserPage({
   const IMAGE = `https://cdn.soapbox.social/images/${profile.image}`;
 
   return (
-    <Page>
+    <main className="main">
       <Meta
         appleItunesApp={`app-id=${APP_ID}, app-argument: ${APP_LINK}`}
         title={`Soapbox: Follow @${profile.username}`}
@@ -38,45 +37,41 @@ export default function UserPage({
         }
       />
 
-      <main className="main">
-        <div className="space-y-8">
-          <div className="text-center space-y-4">
-            <Image
-              key={profile.display_name}
-              alt={profile.display_name}
-              src={IMAGE}
-              className="rounded-full h-24 w-24 mx-auto"
-              width={96}
-              height={96}
-              draggable="false"
-              priority
-              loading="eager"
-            />
+      <div className="space-y-8">
+        <div className="text-center space-y-4">
+          <Image
+            key={profile.display_name}
+            alt={profile.display_name}
+            src={IMAGE}
+            className="rounded-full h-24 w-24 mx-auto"
+            width={96}
+            height={96}
+            draggable="false"
+            priority
+            loading="eager"
+          />
 
-            <div>
-              <h1 className="text-2xl leading-tight font-bold">
-                {profile.display_name}
-              </h1>
+          <div>
+            <h1 className="text-2xl leading-tight font-bold">
+              {profile.display_name}
+            </h1>
 
-              <p className="text-md text-black opacity-50">
-                @{profile.username}
-              </p>
-            </div>
-
-            {profile.bio && <p>{profile.bio}</p>}
+            <p className="text-md text-black opacity-50">@{profile.username}</p>
           </div>
 
-          <div className="text-center">
-            <a
-              href={APP_LINK}
-              className="inline-flex px-6 py-2 text-xl font-medium rounded-full bg-brand text-white"
-            >
-              Follow
-            </a>
-          </div>
+          {profile.bio && <p>{profile.bio}</p>}
         </div>
-      </main>
-    </Page>
+
+        <div className="text-center">
+          <a
+            href={APP_LINK}
+            className="inline-flex px-6 py-2 text-xl font-medium rounded-full bg-brand text-white"
+          >
+            Follow
+          </a>
+        </div>
+      </div>
+    </main>
   );
 }
 

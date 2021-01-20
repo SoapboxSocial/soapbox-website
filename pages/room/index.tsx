@@ -1,8 +1,7 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import { Fragment } from "react";
 import Meta from "../../components/meta";
-import Page from "../../components/page";
-import Room from "../../components/room";
+import RoomPreview from "../../components/room-preview";
 import { APP_ID, APP_NAME } from "../../constants";
 
 export default function RoomPage({
@@ -10,7 +9,7 @@ export default function RoomPage({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const APP_LINK = `soapbox://room?id=${room.id}`;
   return (
-    <Page>
+    <main className="main">
       <Meta
         appleItunesApp={`app-id=${APP_ID}, app-argument: ${APP_LINK}`}
         title={`Soapbox: Join ${room.name}`}
@@ -35,15 +34,13 @@ export default function RoomPage({
         }
       />
 
-      <main className="main">
-        <Room
-          buttonText="Join in"
-          buttonLink={APP_LINK}
-          roomName={room.name}
-          roomMembers={room.members}
-        />
-      </main>
-    </Page>
+      <RoomPreview
+        buttonText="Join in"
+        buttonLink={APP_LINK}
+        roomName={room.name}
+        roomMembers={room.members}
+      />
+    </main>
   );
 }
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { APP_STORE_URL } from "../constants";
 
-export default function Room({
+export default function RoomPreview({
   roomName = "Join in the conversation",
   buttonText = "Get the app",
   buttonLink = APP_STORE_URL,

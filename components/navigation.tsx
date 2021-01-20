@@ -1,10 +1,11 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
-export default function Header({
-  isNavigable = true,
-}: {
-  isNavigable?: boolean;
-}) {
+export default function Navigation() {
+  const router = useRouter();
+
+  const isNavigable = !router.pathname.includes("/report");
+
   const icon = (
     <img
       className="brand-mark"
