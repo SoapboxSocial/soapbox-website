@@ -20,6 +20,8 @@ export default function Meta({
 }) {
   return (
     <Head>
+      <title>{title}</title>
+
       {/* HTML Meta Tags */}
       <meta name="description" content={description} />
 
