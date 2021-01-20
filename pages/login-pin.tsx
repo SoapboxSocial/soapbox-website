@@ -1,12 +1,10 @@
-import Head from "next/head";
 import Page from "../components/page";
+import Meta from "../components/meta";
 
 export default function LoginPinPage() {
   return (
     <Page>
-      <Head>
-        <title>Soapbox</title>
-      </Head>
+      <Meta />
 
       <main className="main">
         <h1>

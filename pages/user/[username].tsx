@@ -1,5 +1,5 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import Head from "next/head";
+import Meta from "../../components/meta";
 import Page from "../../components/page";
 
 export default function UserPage({
@@ -7,9 +7,7 @@ export default function UserPage({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <Page>
-      <Head>
-        <title>Soapbox: Follow @{profile.username}</title>
-      </Head>
+      <Meta title={`Soapbox: Follow @${profile.username}`} />
 
       <main className="main">
         <div className="space-y-8">

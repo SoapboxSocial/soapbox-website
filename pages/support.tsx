@@ -1,13 +1,11 @@
-import Head from "next/head";
+import Meta from "../components/meta";
 import Page from "../components/page";
 import { CONTACT_URL } from "../constants";
 
 export default function SupportPage() {
   return (
     <Page>
-      <Head>
-        <title>Support</title>
-      </Head>
+      <Meta title="Support" />
 
       <main className="main">
         <h1 hidden>Support</h1>

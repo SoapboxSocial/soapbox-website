@@ -1,5 +1,5 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
-import Head from "next/head";
+import Meta from "../../components/meta";
 import Page from "../../components/page";
 import Room from "../../components/room";
 
@@ -8,9 +8,7 @@ export default function RoomPage({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <Page>
-      <Head>
-        <title>Soapbox: Join {room.name}</title>
-      </Head>
+      <Meta title={`Soapbox: Join ${room.name}`} />
 
       <main className="main">
         <Room

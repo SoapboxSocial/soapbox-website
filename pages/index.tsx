@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Meta from "../components/meta";
 import Page from "../components/page";
 import Room from "../components/room";
 import { APP_STORE_URL } from "../constants";
@@ -6,9 +6,7 @@ import { APP_STORE_URL } from "../constants";
 export default function HomePage() {
   return (
     <Page>
-      <Head>
-        <title>Soapbox</title>
-      </Head>
+      <Meta />
 
       <main className="main">
         <Room roomName="Soapbox" buttonText="Join in" />

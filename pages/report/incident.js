@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useForm } from "react-hook-form";
+import Meta from "../../components/meta";
 import Page from "../../components/page";
 
 export default function IncidentPage() {
@@ -32,9 +33,9 @@ export default function IncidentPage() {
 
   return (
     <Page isNavigable={false}>
-      <main className="main">
-        <h1>Report An Incident</h1>
+      <Meta title="Report An Incident" />
 
+      <main className="main">
         <form method="POST" onSubmit={handleSubmit(onSubmit)}>
           {/* Hidden */}
           <input
