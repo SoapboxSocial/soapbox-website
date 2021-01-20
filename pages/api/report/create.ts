@@ -1,6 +1,11 @@
-import { octokit } from "../../../lib/octokit";
+import { Octokit } from "@octokit/core";
+import type { NextApiRequest, NextApiResponse } from "next";
 
-export default async (req, res) => {
+const octokit = new Octokit({
+  auth: process.env.GITHUB_AUTH_TOKEN,
+});
+
+export default async (req: NextApiRequest, res: NextApiResponse) => {
   const report = req.body;
 
   try {
@@ -53,9 +58,13 @@ ${what}
     );
 
     if (response.status === 201) {
-      res.status(201).json({ success: true });
+      res.status(201).json({
+        success: true,
+      });
     } else {
-      res.status(400).json({ success: false });
+      res.status(400).json({
+        success: false,
+      });
     }
   } catch (error) {
     console.error(error);

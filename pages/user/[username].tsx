@@ -1,7 +1,10 @@
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Head from "next/head";
 import Page from "../../components/page";
 
-export default function UserPage({ profile }) {
+export default function UserPage({
+  profile,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <Page>
       <Head>
@@ -45,7 +48,15 @@ export default function UserPage({ profile }) {
   );
 }
 
-export async function getServerSideProps({ params }) {
+type Data = {
+  bio: string;
+  display_name: string;
+  id: number;
+  image: string;
+  username: string;
+};
+
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const ENDPOINT = `https://metadata.soapbox.social/users/${params.username}`;
 
   const res = await fetch(ENDPOINT);
@@ -59,11 +70,11 @@ export async function getServerSideProps({ params }) {
     };
   }
 
-  const profile = await res.json();
+  const profile: Data = await res.json();
 
   return {
     props: {
       profile,
     },
   };
-}
+};

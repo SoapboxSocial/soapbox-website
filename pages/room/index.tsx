@@ -1,8 +1,11 @@
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 import Head from "next/head";
 import Page from "../../components/page";
 import Room from "../../components/room";
 
-export default function RoomPage({ room }) {
+export default function RoomPage({
+  room,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <Page>
       <Head>
@@ -20,7 +23,28 @@ export default function RoomPage({ room }) {
   );
 }
 
-export async function getServerSideProps({ query }) {
+type Member = {
+  displayName: string;
+  id: number;
+  image: string;
+  muted: boolean;
+  role: string;
+  ssrc: number;
+};
+
+type Group = {
+  id: number;
+  image: string;
+  name: string;
+};
+
+type Data = {
+  group: Group;
+  id: number;
+  members: Member[];
+};
+
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const ENDPOINT = `https://metadata.soapbox.social/rooms/${query.id}`;
 
   const res = await fetch(ENDPOINT);
@@ -34,7 +58,7 @@ export async function getServerSideProps({ query }) {
     };
   }
 
-  const data = await res.json();
+  const data: Data = await res.json();
 
   const room = {
     ...data,
@@ -51,4 +75,4 @@ export async function getServerSideProps({ query }) {
       room,
     },
   };
-}
+};
