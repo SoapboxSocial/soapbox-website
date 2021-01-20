@@ -6,7 +6,7 @@ export default function Meta({
   description = "A drop-in audio chat app to have casual conversations with strangers and friends.",
   image = "https://soapbox.social/thumb.jpg",
   url = "https://soapbox.social",
-  twitterCardType = "summary_large_image",
+  twitterCardType = "summary",
   appleItunesApp = "app-id=1529283270",
   extra,
 }: {
