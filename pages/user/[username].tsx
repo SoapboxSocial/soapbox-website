@@ -1,4 +1,5 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import Image from "next/image";
 import { Fragment } from "react";
 import Meta from "../../components/meta";
 import Page from "../../components/page";
@@ -40,11 +41,16 @@ export default function UserPage({
       <main className="main">
         <div className="space-y-8">
           <div className="text-center space-y-4">
-            <img
+            <Image
+              key={profile.display_name}
               alt={profile.display_name}
               src={IMAGE}
               className="rounded-full h-24 w-24 mx-auto"
+              width={96}
+              height={96}
               draggable="false"
+              priority
+              loading="eager"
             />
 
             <div>

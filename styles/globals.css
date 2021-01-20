@@ -124,11 +124,12 @@ body {
 }
 
 .room-head {
-  width: 2.5rem;
-  height: 2.5rem;
-  vertical-align: middle;
   border-radius: 99999px;
   box-shadow: 0 0 0 0.25rem var(--roomBackground);
+}
+
+.room-head > * {
+  overflow: visible !important;
 }
 
 .room-button {

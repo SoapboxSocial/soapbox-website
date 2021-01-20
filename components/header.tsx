@@ -5,7 +5,14 @@ export default function Header({
 }: {
   isNavigable?: boolean;
 }) {
-  const icon = <img className="brand-mark" src="/brand.png" alt="Soapbox" />;
+  const icon = (
+    <img
+      className="brand-mark"
+      src="/brand.png"
+      alt="Soapbox"
+      loading="eager"
+    />
+  );
 
   return (
     <header className="mt-8">

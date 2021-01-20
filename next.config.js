@@ -1,3 +1,7 @@
 const withMDX = require("@next/mdx")();
 
-module.exports = withMDX();
+module.exports = withMDX({
+  images: {
+    domains: ["cdn.soapbox.social"],
+  },
+});
