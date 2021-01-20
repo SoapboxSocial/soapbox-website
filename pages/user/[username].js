@@ -1,24 +1,7 @@
 import Head from "next/head";
 import Page from "../../components/page";
-import { useRouter } from "next/router";
 
 export default function UserPage({ profile }) {
-  const router = useRouter();
-
-  if (router.isFallback) {
-    return (
-      <Page>
-        <Head>
-          <title>Soapbox</title>
-        </Head>
-
-        <main className="main">
-          <h1>Loading</h1>
-        </main>
-      </Page>
-    );
-  }
-
   return (
     <Page>
       <Head>
@@ -62,7 +45,7 @@ export default function UserPage({ profile }) {
   );
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
   const ENDPOINT = `https://metadata.soapbox.social/users/${params.username}`;
 
   const res = await fetch(ENDPOINT);
@@ -71,7 +54,10 @@ export async function getStaticProps({ params }) {
 
   if (!profile) {
     return {
-      notFound: true,
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
     };
   }
 
@@ -79,12 +65,5 @@ export async function getStaticProps({ params }) {
     props: {
       profile,
     },
-  };
-}
-
-export async function getStaticPaths() {
-  return {
-    paths: [],
-    fallback: true,
   };
 }
