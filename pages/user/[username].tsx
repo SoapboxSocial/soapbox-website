@@ -18,6 +18,7 @@ export default function UserPage({
         title={`Soapbox: Follow @${profile.username}`}
         description={`Follow @${profile.username} and get notified when they start a room on Soapbox.`}
         image={IMAGE}
+        url={`https://soapbox.social/user/${profile.username}`}
         twitterCardType="summary"
         extra={
           <Fragment>

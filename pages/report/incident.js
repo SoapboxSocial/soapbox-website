@@ -35,6 +35,7 @@ export default function IncidentPage() {
       <Meta
         title="Report An Incident"
         extra={<meta name="robots" content="noindex" />}
+        url="https://soapbox.social/report/incident"
       />
 
       <form method="POST" onSubmit={handleSubmit(onSubmit)}>

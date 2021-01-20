@@ -4,7 +4,7 @@ import { CONTACT_URL } from "../constants";
 export default function SupportPage() {
   return (
     <main className="main">
-      <Meta title="Support" />
+      <Meta title="Support" url="https://soapbox.social/support" />
 
       <h1 hidden>Support</h1>
 
