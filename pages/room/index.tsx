@@ -8,7 +8,10 @@ export default function RoomPage({
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <Page>
-      <Meta title={`Soapbox: Join ${room.name}`} />
+      <Meta
+        title={`Soapbox: Join ${room.name}`}
+        extra={<meta name="robots" content="noindex" />}
+      />
 
       <main className="main">
         <Room
