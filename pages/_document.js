@@ -50,7 +50,7 @@ export default class SoapboxDocument extends Document {
           />
 
           {/* Apple Meta Tag */}
-          <meta name="apple-itunes-app" content="app-id=id1529283270" />
+          <meta name="apple-itunes-app" content="app-id=1529283270" />
 
           {/* Facebook Meta Tags */}
           <meta property="og:url" content="https://soapbox.social" />
