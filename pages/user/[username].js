@@ -31,14 +31,14 @@ export default function UserPage({ profile }) {
             {profile.bio && <p>{profile.bio}</p>}
           </div>
 
-          {/* <div className="text-center">
+          <div className="text-center">
             <a
-              href="#!"
+              href={`soapbox://resolve?username=${profile.username}`}
               className="inline-flex px-6 py-2 text-xl font-medium rounded-full bg-brand text-white"
             >
               Follow
             </a>
-          </div> */}
+          </div>
         </div>
       </main>
     </Page>
@@ -50,9 +50,7 @@ export async function getServerSideProps({ params }) {
 
   const res = await fetch(ENDPOINT);
 
-  const profile = await res.json();
-
-  if (!profile) {
+  if (!res.ok) {
     return {
       redirect: {
         destination: "/",
@@ -60,6 +58,8 @@ export async function getServerSideProps({ params }) {
       },
     };
   }
+
+  const profile = await res.json();
 
   return {
     props: {

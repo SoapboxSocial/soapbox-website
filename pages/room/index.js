@@ -25,19 +25,7 @@ export async function getServerSideProps({ query }) {
 
   const res = await fetch(ENDPOINT);
 
-  const data = await res.json();
-
-  const room = {
-    ...data,
-    members: data.members.map((member) => ({
-      ...member,
-      image: `https://cdn.soapbox.social/images/${member.image}`,
-    })),
-  };
-
-  console.log(room);
-
-  if (!room) {
+  if (!res.ok) {
     return {
       redirect: {
         destination: "/",
@@ -45,6 +33,18 @@ export async function getServerSideProps({ query }) {
       },
     };
   }
+
+  const data = await res.json();
+
+  const room = {
+    ...data,
+    members: data.members
+      .sort((a, b) => a.id - b.id)
+      .map((member) => ({
+        ...member,
+        image: `https://cdn.soapbox.social/images/${member.image}`,
+      })),
+  };
 
   return {
     props: {
