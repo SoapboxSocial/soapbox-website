@@ -10,7 +10,7 @@ export default function RoomPage() {
       </Head>
 
       <main className="main">
-        <Room />
+        <Room roomName="ETH PUMPING BABY" buttonText="Join in" />
       </main>
     </Page>
   );
