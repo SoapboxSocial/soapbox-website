@@ -48,15 +48,6 @@ body {
   color: var(--textPrimary);
 }
 
-.wrapper {
-  min-height: 100vh;
-  /* mobile viewport bug fix */
-  min-height: -webkit-fill-available;
-
-  display: flex;
-  flex-direction: column;
-}
-
 .brand-mark {
   height: 4rem;
 }
@@ -111,21 +102,6 @@ body {
     padding: 0.75rem 1.875rem;
   }
 }
-
-.badge {
-  height: 4rem;
-  width: 12rem;
-  background-image: url("/badge_black.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-/* @media (prefers-color-scheme: dark) {
-  .badge {
-    background-image: url("/badge_white.svg");
-  }
-} */
 
 .room {
   max-width: 428px;

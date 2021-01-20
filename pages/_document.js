@@ -20,8 +20,6 @@ export default class SoapboxDocument extends Document {
             type="font/woff2"
             crossOrigin="anonymous"
           />
-          <link rel="preload" as="image" href="/badge_black.svg" />
-          <link rel="preload" as="image" href="/badge_white.svg" />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -63,7 +61,7 @@ export default class SoapboxDocument extends Document {
             })}
           />
         </Head>
-        <body>
+        <body className="flex flex-col min-h-screen">
           <Main />
           <NextScript />
         </body>
