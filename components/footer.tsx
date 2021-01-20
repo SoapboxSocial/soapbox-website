@@ -7,7 +7,7 @@ export default function Footer() {
         <li className="mr-4 mb-2">
           <a
             className="text-black opacity-25 focus:outline-none focus:opacity-75 hover:opacity-75"
-            href="https://twitter.com/joinsoapbox"
+            href="https://twitter.com/intent/user?screen_name=joinsoapbox"
           >
             Twitter
           </a>
