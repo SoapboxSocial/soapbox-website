@@ -2,10 +2,6 @@
 User-agent: *
 Allow: /
 
-# *
-User-agent: *
-Disallow: /room
-
 # Host
 Host: https://soapbox.social
 

@@ -1,22 +1,44 @@
 import { GetServerSideProps, InferGetServerSidePropsType } from "next";
+import { Fragment } from "react";
 import Meta from "../../components/meta";
 import Page from "../../components/page";
 import Room from "../../components/room";
+import { APP_ID } from "../../constants";
 
 export default function RoomPage({
   room,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  const APP_LINK = `soapbox://room?id=${room.id}`
   return (
     <Page>
       <Meta
+        appleItunesApp={`app-id=${APP_ID}, app-argument: ${APP_LINK}`}
         title={`Soapbox: Join ${room.name}`}
-        extra={<meta name="robots" content="noindex" />}
+    
+        twitterCardType="summary"
+        extra={
+          <Fragment>
+            <meta name="robots" content="noindex" />
+
+            {/* Facebook */}
+            <meta property="al:ios:app_store_id" content={APP_ID} />
+            <meta property="al:ios:app_name" content={APP_NAME} />
+            <meta property="al:ios:url" content={APP_LINK} />
+
+            {/* Twitter */}
+            <meta name="twitter:app:name:iphone" content={APP_NAME} />
+            <meta name="twitter:app:id:iphone" content={APP_ID} />
+            <meta name="twitter:app:url:iphone" content={APP_LINK} />
+            <meta name="twitter:app:name:ipad" content={APP_NAME} />
+            <meta name="twitter:app:id:ipad" content={APP_ID} />
+            <meta name="twitter:app:url:ipad" content={APP_LINK} />
+          </Fragment>
       />
 
       <main className="main">
         <Room
           buttonText="Join in"
-          buttonLink={`soapbox://room?id=${room.id}`}
+          buttonLink={APP_LINK}
           roomName={room.name}
           roomMembers={room.members}
         />
