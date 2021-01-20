@@ -1,6 +1,10 @@
 import Link from "next/link";
 
-export default function Header({ isNavigable = true }) {
+export default function Header({
+  isNavigable = true,
+}: {
+  isNavigable?: boolean;
+}) {
   return (
     <header className="mt-8">
       <nav className="flex justify-center">

@@ -36,7 +36,7 @@ export default function UserPage({
 
           <div className="text-center">
             <a
-              href={`soapbox://resolve?username=${profile.username}`}
+              href={`soapbox://user/${profile.username}`}
               className="inline-flex px-6 py-2 text-xl font-medium rounded-full bg-brand text-white"
             >
               Follow
