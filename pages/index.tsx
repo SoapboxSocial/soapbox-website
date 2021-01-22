@@ -22,7 +22,7 @@ export default function HomePage() {
       <Meta />
 
       <div
-        className="pt-5 md:pt-10 px-5 md:px-10 bg-white overflow-hidden text-center relative rounded-3xl"
+        className="max-w-2xl w-full mx-auto pt-5 md:pt-10 px-5 md:px-10 bg-white overflow-hidden text-center relative rounded-3xl"
         style={{ borderRadius: 30 }}
       >
         <img
@@ -36,10 +36,10 @@ export default function HomePage() {
         {/* Spacer */}
         <div className="h-8" />
 
-        <h1 className="text-3xl font-bold">Soapbox</h1>
+        <h1 className="text-4xl font-bold">Soapbox</h1>
 
         {/* Spacer */}
-        <div className="h-8" />
+        <div className="h-4" />
 
         <p className="text-xl max-w-md mx-auto">
           A drop-in audio chat app to have casual conversations with strangers
@@ -77,6 +77,7 @@ export default function HomePage() {
             src="/screenshot.png"
             width={390}
             height={576}
+            draggable={false}
             priority
             objectFit="cover"
             objectPosition="top"
