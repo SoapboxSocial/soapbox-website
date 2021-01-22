@@ -6,6 +6,7 @@ export default class SoapboxDocument extends Document {
     return (
       <Html lang="en" className="text-base sm:text-xl">
         <Head>
+          {/* Font Preload Tags */}
           <link
             rel="preload"
             href="/SFRounded-Semibold.woff2"
