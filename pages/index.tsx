@@ -19,85 +19,72 @@ export default function HomePage() {
   return (
     <main className="flex flex-col flex-1 p-5">
       <Meta />
-      <div className="grid gap-8 max-w-3xl w-full mx-auto">
-        <div
-          className="p-5 md:p-10 bg-white overflow-hidden text-center relative"
-          style={{ borderRadius: 30 }}
-        >
+
+      <div
+        className="p-5 md:p-10 bg-white overflow-hidden text-center relative rounded-3xl"
+        style={{ borderRadius: 30 }}
+      >
+        <img
+          draggable={false}
+          className="brand-mark mx-auto"
+          src="/brand.png"
+          alt="Soapbox"
+          loading="eager"
+        />
+
+        {/* Spacer */}
+        <div className="h-8" />
+
+        <h1 className="text-3xl font-bold">Soapbox</h1>
+
+        {/* Spacer */}
+        <div className="h-8" />
+
+        <p className="text-xl max-w-md mx-auto">
+          A drop-in audio chat app to have casual conversations with strangers
+          and friends.
+        </p>
+
+        {/* Spacer */}
+        <div className="h-16" />
+
+        <div className="relative inline-flex mx-auto">
+          <AppStoreButton />
+
           <img
             draggable={false}
-            className="brand-mark mx-auto"
-            src="/brand.png"
-            alt="Soapbox"
-            loading="eager"
-          />
-
-          {/* Spacer */}
-          <div className="h-8" />
-
-          <h1 className="text-3xl font-bold">Soapbox</h1>
-
-          {/* Spacer */}
-          <div className="h-8" />
-
-          <p className="text-xl max-w-md mx-auto">
-            A drop-in audio chat app to have casual conversations with strangers
-            and friends.
-          </p>
-
-          {/* Spacer */}
-          <div className="h-16" />
-
-          <div className="relative inline-flex mx-auto">
-            <AppStoreButton />
-
-            <img
-              draggable={false}
-              aria-hidden
-              className="absolute w-40 -right-44 top-4 transform-gpu -rotate-12"
-              src="/cyan-dude.png"
-              alt=""
-            />
-
-            <img
-              draggable={false}
-              aria-hidden
-              className="absolute -left-40 -top-10 transform-gpu -rotate-12 w-32"
-              src="/green-dude.png"
-              alt=""
-            />
-          </div>
-
-          {/* Spacer */}
-          <div className="h-16" />
-
-          <img
-            className="-mb-64 w-full mx-auto"
-            style={{ maxWidth: 390 }}
-            src="/screenshot.png"
+            aria-hidden
+            className="absolute w-40 -right-44 top-4 transform-gpu -rotate-12"
+            src="/cyan-dude.png"
             alt=""
           />
 
           <img
             draggable={false}
             aria-hidden
-            className="absolute -left-4 md:left-8 -bottom-4 md:bottom-8 transform-gpu -rotate-12 w-32"
-            src="/pink-dude.png"
+            className="absolute -left-40 -top-10 transform-gpu -rotate-12 w-32"
+            src="/green-dude.png"
             alt=""
           />
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-2">
-          <div
-            className="w-full max-w-2xl mx-auto p-5 md:p-10 bg-white overflow-hidden text-center relative"
-            style={{ borderRadius: 30 }}
-          ></div>
+        {/* Spacer */}
+        <div className="h-16" />
 
-          <div
-            className="w-full max-w-2xl mx-auto p-5 md:p-10 bg-white overflow-hidden text-center relative"
-            style={{ borderRadius: 30 }}
-          ></div>
-        </div>
+        <img
+          className="-mb-64 w-full mx-auto"
+          style={{ maxWidth: 390 }}
+          src="/screenshot.png"
+          alt=""
+        />
+
+        <img
+          draggable={false}
+          aria-hidden
+          className="absolute -left-4 md:left-8 -bottom-4 md:bottom-8 transform-gpu -rotate-12 w-32"
+          src="/pink-dude.png"
+          alt=""
+        />
       </div>
     </main>
   );
