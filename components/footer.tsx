@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="max-w-2xl mx-auto w-full p-6">
+    <footer className="max-w-2xl mx-auto w-full p-6 pb-12">
       <ul className="flex flex-wrap justify-center -mr-4 -mb-2 text-sm ">
         <li className="mr-4 mb-2">
           <a

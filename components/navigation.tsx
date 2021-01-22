@@ -6,6 +6,8 @@ export default function Navigation() {
 
   const isNavigable = !router.pathname.includes("/report");
 
+  const isHome = router.pathname === "/";
+
   const icon = (
     <img
       className="brand-mark"
@@ -14,6 +16,8 @@ export default function Navigation() {
       loading="eager"
     />
   );
+
+  if (isHome) return null;
 
   return (
     <header className="mt-8">
