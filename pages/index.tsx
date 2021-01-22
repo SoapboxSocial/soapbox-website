@@ -1,6 +1,7 @@
 import Meta from "../components/meta";
 import { APP_STORE_URL } from "../constants";
 import Apple from "../icons/apple";
+import Image from "next/image";
 
 function AppStoreButton() {
   return (
@@ -21,7 +22,7 @@ export default function HomePage() {
       <Meta />
 
       <div
-        className="p-5 md:p-10 bg-white overflow-hidden text-center relative rounded-3xl"
+        className="pt-5 md:pt-10 px-5 md:px-10 bg-white overflow-hidden text-center relative rounded-3xl"
         style={{ borderRadius: 30 }}
       >
         <img
@@ -71,12 +72,18 @@ export default function HomePage() {
         {/* Spacer */}
         <div className="h-16" />
 
-        <img
-          className="-mb-64 w-full mx-auto"
-          style={{ maxWidth: 390 }}
-          src="/screenshot.png"
-          alt=""
-        />
+        <div className="flex justify-center">
+          <Image
+            src="/screenshot.png"
+            width={390}
+            height={576}
+            priority
+            objectFit="cover"
+            objectPosition="top"
+            className="align-middle"
+            alt=""
+          />
+        </div>
 
         <img
           draggable={false}
