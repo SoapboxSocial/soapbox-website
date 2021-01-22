@@ -74,7 +74,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="flex justify-center pt-12">
+          <div className="flex justify-center lg:pt-12">
             <Image
               src="/screenshot.png"
               width={390}
