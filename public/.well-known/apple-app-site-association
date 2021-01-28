@@ -14,8 +14,8 @@
             "comment": "Matches any URL whose path is /login-pin and has a query of exactly 6 characters"
           },
           {
-            "/": "/room",
-            "comment": "Matches any URL whose path is /room"
+            "/": "/room/*",
+            "comment": "Matches any URL whose path is /room/*"
           },
           {
             "/": "/user/*",

@@ -7,7 +7,7 @@ import { APP_ID, APP_NAME } from "../../constants";
 export default function RoomPage({
   room,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  const APP_LINK = `soapbox://room?id=${room.id}`;
+  const APP_LINK = `soapbox://room/${room.id}`;
   return (
     <main className="main">
       <Meta
@@ -66,8 +66,8 @@ type Data = {
   members: Member[];
 };
 
-export const getServerSideProps: GetServerSideProps = async ({ query }) => {
-  const ENDPOINT = `https://metadata.soapbox.social/rooms/${query.id}`;
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+  const ENDPOINT = `https://metadata.soapbox.social/rooms/${params.id}`;
 
   const res = await fetch(ENDPOINT);
 
