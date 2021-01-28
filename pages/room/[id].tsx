@@ -13,7 +13,7 @@ export default function RoomPage({
       <Meta
         appleItunesApp={`app-id=${APP_ID}, app-argument: ${APP_LINK}`}
         title={`Soapbox: Join ${room.name}`}
-        url={`https://soapbox.social/room?id=${room.id}`}
+        url={`https://soapbox.social/room/${room.id}`}
         extra={
           <Fragment>
             <meta name="robots" content="noindex" />
