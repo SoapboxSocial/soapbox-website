@@ -8,6 +8,7 @@ export default function RoomPage({
   room,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const APP_LINK = `soapbox://room/${room.id}`;
+
   return (
     <main className="main">
       <Meta
