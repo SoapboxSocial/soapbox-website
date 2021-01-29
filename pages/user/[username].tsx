@@ -4,15 +4,15 @@ import { Fragment } from "react";
 import Meta from "../../components/meta";
 import { APP_ID, APP_NAME } from "../../constants";
 
-export default function UserPage({
-  profile,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+type Props = InferGetServerSidePropsType<typeof getServerSideProps>;
+
+export default function UserPage({ profile }: Props) {
   const APP_LINK = `soapbox://user/${profile.username}`;
 
   const IMAGE = `https://cdn.soapbox.social/images/${profile.image}`;
 
   return (
-    <main className="main">
+    <main className="py-20 px-5">
       <Meta
         appleItunesApp={`app-id=${APP_ID}, app-argument: ${APP_LINK}`}
         title={`Soapbox: Follow @${profile.username}`}
