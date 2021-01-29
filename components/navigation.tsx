@@ -6,7 +6,7 @@ export default function Navigation() {
 
   const isNavigable = !pathname.includes("/report");
 
-  const shouldHideNavigation = pathname === "/";
+  const isHome = pathname === "/";
 
   const icon = (
     <img
@@ -17,7 +17,7 @@ export default function Navigation() {
     />
   );
 
-  if (shouldHideNavigation) return null;
+  if (isHome) return null;
 
   return (
     <header className="mt-5">

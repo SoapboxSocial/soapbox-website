@@ -6,7 +6,7 @@ export default function SupportPage() {
     <main className="p-5">
       <Meta title="Support" url="https://soapbox.social/support" />
 
-      <div className="max-w-2xl w-full mx-auto p-5 md:p-10 bg-white rounded-room text-center">
+      <div className="max-w-3xl w-full mx-auto p-5 md:p-10 bg-white rounded-room text-center">
         <div className="prose max-w-none">
           <h1>Support</h1>
 
