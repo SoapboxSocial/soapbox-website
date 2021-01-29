@@ -35,12 +35,14 @@ export default function RoomPage({
         }
       />
 
-      <RoomPreview
-        buttonText="Join in"
-        buttonLink={APP_LINK}
-        roomName={room.name}
-        roomMembers={room.members}
-      />
+      <div style={{ maxWidth: 428 }}>
+        <RoomPreview
+          buttonText="Join in"
+          buttonLink={APP_LINK}
+          roomName={room.name}
+          roomMembers={room.members}
+        />
+      </div>
     </main>
   );
 }

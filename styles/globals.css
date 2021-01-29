@@ -103,8 +103,6 @@ body {
 }
 
 .room {
-  max-width: 428px;
-  width: 100%;
   padding: 1.25rem;
   border-radius: 1.85rem;
   background-color: var(--roomBackground);
