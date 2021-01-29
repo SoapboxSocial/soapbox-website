@@ -1,11 +1,9 @@
 import Image from "next/image";
-import { APP_STORE_URL } from "../constants";
 
-export default function RoomPreview({
-  roomName = "Join in the conversation",
-  buttonText = "Get the app",
-  buttonLink = APP_STORE_URL,
-  roomMembers = [
+export default function PostPreview({
+  title,
+  date,
+  authors = [
     {
       displayName: "Dean",
       image: "/dean.png",
@@ -14,18 +12,14 @@ export default function RoomPreview({
       displayName: "Jeff",
       image: "/jeff.png",
     },
-    {
-      displayName: "Unicorn",
-      image: "/unicorn.png",
-    },
   ],
 }) {
   return (
     <div className="room">
-      <div className="room-title">{roomName}</div>
+      <div className="room-title">{title}</div>
       <div className="flex items-center justify-between">
         <div className="flex -space-x-2">
-          {roomMembers.slice(0, 3).map((member, i) => (
+          {authors.map((member, i) => (
             <div key={i} className="flex room-head overflow-visible">
               <Image
                 height={50}
@@ -38,12 +32,7 @@ export default function RoomPreview({
             </div>
           ))}
         </div>
-        <a
-          href={buttonLink}
-          className="no-underline room-button focus:outline-none focus:ring-4"
-        >
-          {buttonText}
-        </a>
+        <div className="no-underline room-button">{date}</div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import type { GetStaticPaths, InferGetStaticPropsType } from "next";
 import hydrate from "next-mdx-remote/hydrate";
-import RoomPreview from "../../components/room-preview";
+import PostPreview from "../../components/post-preview";
 import { getAllPosts, getPostBySlug } from "../../lib";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
@@ -11,21 +11,7 @@ export default function Post({ slug, meta, source }: Props) {
   return (
     <main className="flex-1 p-5">
       <div className="max-w-lg mx-auto">
-        <RoomPreview
-          roomName={meta.title}
-          roomMembers={[
-            {
-              displayName: "Dean",
-              image: "/dean.png",
-            },
-            {
-              displayName: "Jeff",
-              image: "/jeff.png",
-            },
-          ]}
-          buttonText="Feb 3, 2020"
-          buttonLink=""
-        />
+        <PostPreview title={meta.title} date="Feb 3, 21" />
 
         <div className="h-5" />
 
