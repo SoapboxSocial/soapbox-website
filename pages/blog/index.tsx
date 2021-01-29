@@ -14,6 +14,7 @@ export default function Blog({ posts }: Props) {
       <div className="max-w-sm mx-auto">
         <div className="prose text-center">
           <h1>Our Soapbox</h1>
+          <p>A blog by the Soapbox team.</p>
         </div>
 
         <div className="h-20" />
