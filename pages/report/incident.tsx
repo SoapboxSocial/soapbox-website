@@ -1,18 +1,31 @@
 import { useRouter } from "next/router";
-import { useForm } from "react-hook-form";
+import { SubmitHandler, useForm } from "react-hook-form";
 import Meta from "../../components/meta";
+
+type FormValues = {
+  userId?: string;
+  reportedUserId?: string;
+  reportedGroupId?: string;
+  email: string;
+  name: string;
+  what: string;
+  subject: string;
+  details: string;
+  reportIsCorrect: boolean;
+};
 
 export default function IncidentPage() {
   const { query } = useRouter();
+
   const userId = query.userId;
   const reportedUserId = query.reportedUserId;
   const reportedGroupId = query.reportedGroupId;
 
-  const { register, handleSubmit, formState } = useForm();
+  const { register, handleSubmit, formState } = useForm<FormValues>();
 
   const { isSubmitting } = formState;
 
-  const onSubmit = async (data) => {
+  const onSubmit: SubmitHandler<FormValues> = async (data) => {
     try {
       await fetch("/api/report/create", {
         method: "POST",
@@ -137,7 +150,7 @@ export default function IncidentPage() {
               name="details"
               id="details"
               autoComplete="off"
-              rows="5"
+              rows={5}
               ref={register}
               required
             />
