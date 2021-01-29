@@ -238,3 +238,19 @@ input[type="checkbox"] {
   height: 1.5rem;
   width: 1.5rem;
 }
+
+@layer utilities {
+  .crop::before,
+  .crop::after {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+  }
+  .crop::before {
+    margin-top: calc((1 - 1.85) * 0.5em);
+  }
+  .crop::after {
+    margin-bottom: calc((1 - 1.85) * 0.5em);
+  }
+}

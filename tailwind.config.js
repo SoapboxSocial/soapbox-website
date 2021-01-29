@@ -6,6 +6,9 @@ module.exports = {
       colors: {
         brand: "#8359fe",
       },
+      borderRadius: {
+        room: "1.85rem",
+      },
     },
   },
   variants: {
