@@ -7,7 +7,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export default function Blog({ posts }: Props) {
   return (
-    <main className="flex-1 p-5">
+    <main className="p-5">
       <div className="max-w-sm mx-auto">
         <div className="prose">
           <h1>Our Soapbox</h1>

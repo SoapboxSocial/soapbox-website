@@ -18,13 +18,10 @@ function AppStoreButton() {
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col flex-1 justify-center p-5">
+    <main className="p-5">
       <Meta />
 
-      <div
-        className="max-w-5xl w-full mx-auto pt-5 md:pt-10 px-5 md:px-10 bg-white overflow-hidden text-center relative rounded-3xl"
-        style={{ borderRadius: 30 }}
-      >
+      <div className="max-w-5xl w-full mx-auto pt-5 md:pt-10 px-5 md:px-10 bg-white overflow-hidden text-center relative rounded-room">
         <div className="grid lg:grid-cols-2 gap-16">
           <div className="text-center lg:text-left">
             <img

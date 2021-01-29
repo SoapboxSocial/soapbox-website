@@ -1,56 +1,38 @@
 import Link from "next/link";
+import { MEDIA_KIT_URL, TWITTER_URL } from "../constants";
 
 export default function Footer() {
   return (
-    <footer className="max-w-2xl mx-auto w-full p-6 pb-12">
-      <ul className="flex flex-wrap justify-center -mr-4 -mb-2 text-sm ">
-        <li className="mr-4 mb-2">
-          <a
-            className="text-black opacity-25 focus:outline-none focus:opacity-75 hover:opacity-75"
-            href="https://twitter.com/intent/user?screen_name=joinsoapbox"
-          >
+    <footer className="text-sm text-black pb-6">
+      <ul className="w-full flex flex-wrap justify-center -mr-4 -mb-2">
+        <li className="footer-item">
+          <a className="footer-item-link" href={TWITTER_URL}>
             Twitter
           </a>
         </li>
-
-        <li className="mr-4 mb-2">
-          <a
-            className="text-black opacity-25 focus:outline-none focus:opacity-75 hover:opacity-75"
-            href="https://www.notion.so/Media-Kit-f122893891b84cb5a19a8744b770f847"
-          >
+        <li className="footer-item">
+          <a className="footer-item-link" href={MEDIA_KIT_URL}>
             Media Kit
           </a>
         </li>
-
-        <li className="mr-4 mb-2">
+        <li className="footer-item">
           <Link href="/blog">
-            <a className="text-black opacity-25 focus:outline-none focus:opacity-75 hover:opacity-75">
-              Blog
-            </a>
+            <a className="footer-item-link">Blog</a>
           </Link>
         </li>
-
-        <li className="mr-4 mb-2">
+        <li className="footer-item">
           <Link href="/support">
-            <a className="text-black opacity-25 focus:outline-none focus:opacity-75 hover:opacity-75">
-              Support
-            </a>
+            <a className="footer-item-link">Support</a>
           </Link>
         </li>
-
-        <li className="mr-4 mb-2">
+        <li className="footer-item">
           <Link href="/privacy">
-            <a className="text-black opacity-25 focus:outline-none focus:opacity-75 hover:opacity-75">
-              Privacy
-            </a>
+            <a className="footer-item-link">Privacy</a>
           </Link>
         </li>
-
-        <li className="mr-4 mb-2">
+        <li className="footer-item">
           <Link href="/terms">
-            <a className="text-black opacity-25 focus:outline-none focus:opacity-75 hover:opacity-75">
-              Terms
-            </a>
+            <a className="footer-item-link">Terms</a>
           </Link>
         </li>
       </ul>

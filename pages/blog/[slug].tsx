@@ -9,13 +9,13 @@ export default function Post({ slug, meta, source }: Props) {
   const content = hydrate(source);
 
   return (
-    <main className="flex-1 p-5">
+    <main className="p-5">
       <div className="max-w-lg mx-auto">
-        <PostPreview title={meta.title} date="Feb 3, 21" />
+        <h1>{meta.title}</h1>
 
         <div className="h-5" />
 
-        <div className="prose sm:px-5 crop">{content}</div>
+        <div className="prose">{content}</div>
       </div>
     </main>
   );

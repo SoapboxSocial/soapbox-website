@@ -254,3 +254,12 @@ input[type="checkbox"] {
     margin-bottom: calc((1 - 1.85) * 0.5em);
   }
 }
+
+@layer components {
+  .footer-item {
+    @apply mr-4 mb-2;
+  }
+  .footer-item-link {
+    @apply opacity-25 focus:outline-none focus:opacity-75 hover:opacity-75;
+  }
+}
