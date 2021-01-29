@@ -7,20 +7,20 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export default function Blog({ posts }: Props) {
   return (
-    <main className="p-5">
+    <main className="py-20 px-5">
       <div className="max-w-sm mx-auto">
-        <div className="prose">
+        <div className="prose text-center">
           <h1>Our Soapbox</h1>
         </div>
 
-        <div className="h-5" />
+        <div className="h-20" />
 
-        <ul>
+        <ul className="space-y-8">
           {posts?.map(({ slug, meta }, i) => (
             <li key={i}>
               <Link href={`/blog/${slug}`}>
                 <a>
-                  <PostPreview title={meta.title} date="Feb 3, 21" />
+                  <PostPreview title={meta.title} date={meta.date} />
                 </a>
               </Link>
             </li>
