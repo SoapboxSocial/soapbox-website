@@ -1,6 +1,6 @@
 import type { InferGetStaticPropsType } from "next";
 import Link from "next/link";
-import RoomPreview from "../../components/room-preview";
+import PostPreview from "../../components/post-preview";
 import { getAllPostsWithData } from "../../lib";
 
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
@@ -20,21 +20,7 @@ export default function Blog({ posts }: Props) {
             <li key={i}>
               <Link href={`/blog/${slug}`}>
                 <a>
-                  <RoomPreview
-                    roomName={meta.title}
-                    roomMembers={[
-                      {
-                        displayName: "Dean",
-                        image: "/dean.png",
-                      },
-                      {
-                        displayName: "Jeff",
-                        image: "/jeff.png",
-                      },
-                    ]}
-                    buttonText="Feb 3, 2020"
-                    buttonLink=""
-                  />
+                  <PostPreview title={meta.title} date="Feb 3, 21" />
                 </a>
               </Link>
             </li>
