@@ -23,6 +23,14 @@ export default function Footer() {
         </li>
 
         <li className="mr-4 mb-2">
+          <Link href="/blog">
+            <a className="text-black opacity-25 focus:outline-none focus:opacity-75 hover:opacity-75">
+              Blog
+            </a>
+          </Link>
+        </li>
+
+        <li className="mr-4 mb-2">
           <Link href="/support">
             <a className="text-black opacity-25 focus:outline-none focus:opacity-75 hover:opacity-75">
               Support
