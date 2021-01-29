@@ -3,16 +3,25 @@ import { CONTACT_URL } from "../constants";
 
 export default function SupportPage() {
   return (
-    <main className="main">
+    <main className="p-5">
       <Meta title="Support" url="https://soapbox.social/support" />
 
-      <h1 hidden>Support</h1>
+      <div className="max-w-2xl w-full mx-auto p-5 md:p-10 bg-white rounded-room text-center">
+        <div className="prose max-w-none">
+          <h1>Support</h1>
 
-      <p className="summary">Get help from the Soapbox Team.</p>
+          <p>Get help from the Soapbox Team.</p>
+        </div>
 
-      <a className="button" href={CONTACT_URL}>
-        Contact us
-      </a>
+        <div className="h-8" />
+
+        <a
+          className="py-4 px-8 bg-brand text-white rounded-full inline-flex justify-center items-center space-x-3 focus:outline-none focus:ring-4"
+          href={CONTACT_URL}
+        >
+          <span className="text-2xl font-medium">Contact us</span>
+        </a>
+      </div>
     </main>
   );
 }
