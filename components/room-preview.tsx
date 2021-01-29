@@ -20,6 +20,18 @@ export default function RoomPreview({
     },
   ],
 }) {
+  let button = <div className="no-underline room-button">{buttonText}</div>;
+
+  if (buttonLink.includes("//"))
+    button = (
+      <a
+        href={buttonLink}
+        className="no-underline room-button focus:outline-none focus:ring-4"
+      >
+        {buttonText}
+      </a>
+    );
+
   return (
     <div className="room">
       <div className="room-title">{roomName}</div>
@@ -38,12 +50,7 @@ export default function RoomPreview({
             </div>
           ))}
         </div>
-        <a
-          href={buttonLink}
-          className="room-button focus:outline-none focus:ring-4"
-        >
-          {buttonText}
-        </a>
+        {button}
       </div>
     </div>
   );
