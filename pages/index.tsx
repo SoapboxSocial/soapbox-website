@@ -12,7 +12,7 @@ export default function HomePage() {
           <div className="text-center lg:text-left">
             <img
               draggable={false}
-              className="h-16 mx-auto lg:mx-0"
+              className="soapbox-mark mx-auto lg:mx-0"
               src="/brand.png"
               alt="Soapbox"
               loading="eager"

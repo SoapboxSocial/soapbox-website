@@ -48,6 +48,10 @@ body {
   color: var(--textPrimary);
 }
 
+.soapbox-mark {
+  height: 80px;
+}
+
 .room {
   padding: 1.25rem;
   border-radius: 1.85rem;
