@@ -2,15 +2,15 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function Navigation() {
-  const router = useRouter();
+  const { pathname } = useRouter();
 
-  const isNavigable = !router.pathname.includes("/report");
+  const isNavigable = !pathname.includes("/report");
 
-  const isHome = router.pathname === "/";
+  const isHome = pathname === "/";
 
   const icon = (
     <img
-      className="brand-mark"
+      className="soapbox-mark"
       src="/brand.png"
       alt="Soapbox"
       loading="eager"
@@ -20,7 +20,7 @@ export default function Navigation() {
   if (isHome) return null;
 
   return (
-    <header className="mt-8">
+    <header className="mt-5">
       <nav className="flex justify-center">
         {isNavigable ? (
           <Link href="/">

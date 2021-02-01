@@ -40,7 +40,7 @@ export default function RoomPreview({
         </div>
         <a
           href={buttonLink}
-          className="room-button focus:outline-none focus:ring-4"
+          className="no-underline room-button focus:outline-none focus:ring-4"
         >
           {buttonText}
         </a>

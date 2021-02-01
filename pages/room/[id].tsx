@@ -4,13 +4,13 @@ import Meta from "../../components/meta";
 import RoomPreview from "../../components/room-preview";
 import { APP_ID, APP_NAME } from "../../constants";
 
-export default function RoomPage({
-  room,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+type Props = InferGetServerSidePropsType<typeof getServerSideProps>;
+
+export default function RoomPage({ room }: Props) {
   const APP_LINK = `soapbox://room/${room.id}`;
 
   return (
-    <main className="main">
+    <main className="py-20 px-5">
       <Meta
         appleItunesApp={`app-id=${APP_ID}, app-argument: ${APP_LINK}`}
         title={`Soapbox: Join ${room.name}`}
@@ -35,12 +35,14 @@ export default function RoomPage({
         }
       />
 
-      <RoomPreview
-        buttonText="Join in"
-        buttonLink={APP_LINK}
-        roomName={room.name}
-        roomMembers={room.members}
-      />
+      <div className="w-full mx-auto" style={{ maxWidth: 428 }}>
+        <RoomPreview
+          buttonText="Join in"
+          buttonLink={APP_LINK}
+          roomName={room.name}
+          roomMembers={room.members}
+        />
+      </div>
     </main>
   );
 }
