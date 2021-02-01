@@ -17,7 +17,7 @@ At Soapbox we strive to enable genuine and friendly communication. Instead of li
 
 Since our initial [launch on the App Store](https://apps.apple.com/us/app/soapbox-talk-with-anyone/id1529283270) and [our debut on Product Hunt](https://www.producthunt.com/posts/soapbox-talk-with-anyone), we’ve added a bunch of features and improvements. We don’t plan on slowing down anytime soon. Our users are at the core of what we do at Soapbox, and we’re always engaging with them to improve our platform for everyone.
 
-## So what’s new in 2.0?
+## So What’s New in 2.0?
 
 The main focus of our v2 release is the corner-stone of our product: voice. We’ve decided to rework everything from the ground-up, making your rooms more reliable and better quality.
 
