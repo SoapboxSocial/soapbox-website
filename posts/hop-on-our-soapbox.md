@@ -31,4 +31,6 @@ Some of our upcoming features include micro-apps, games and polls. Users will be
 
 We also plan on making an open source SDK for developers to be able to build their own games that interact with a user’s Soapbox profile.
 
+In the near term, we are focusing on ensuring our current users are engaged and that our new users get the warm welcome they deserve when signing up!
+
 We’re incredibly thankful for all of the feedback and love our users have been giving us these past few months, and we’re hoping you’ll come along for the ride!
