@@ -9,7 +9,12 @@ export default function Navigation() {
   const isHome = pathname === "/";
 
   const icon = (
-    <img className="h-16" src="/brand.png" alt="Soapbox" loading="eager" />
+    <img
+      className="soapbox-mark"
+      src="/brand.png"
+      alt="Soapbox"
+      loading="eager"
+    />
   );
 
   if (isHome) return null;
