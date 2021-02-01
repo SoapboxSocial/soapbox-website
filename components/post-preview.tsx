@@ -1,19 +1,6 @@
 import Image from "next/image";
 
-export default function PostPreview({
-  title,
-  date,
-  authors = [
-    {
-      displayName: "Dean",
-      image: "/dean.png",
-    },
-    {
-      displayName: "Jeff",
-      image: "/jeff.png",
-    },
-  ],
-}) {
+export default function PostPreview({ title, date, authors }) {
   return (
     <div className="room">
       <div className="room-title">{title}</div>
