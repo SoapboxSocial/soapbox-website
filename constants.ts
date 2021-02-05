@@ -12,3 +12,5 @@ export const TWITTER_URL =
 
 export const MEDIA_KIT_URL =
   "https://www.notion.so/Media-Kit-f122893891b84cb5a19a8744b770f847";
+
+export const FATHOM_ID = "EAKOKPAD";
