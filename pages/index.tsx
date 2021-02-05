@@ -97,17 +97,20 @@ export default function HomePage() {
               going.
             </p>
           </div>
-        </div>
 
-        <div className="flex justify-center">
-          <Image
-            alt="Link Sharing"
-            draggable={false}
-            height={400}
-            objectFit="contain"
-            src="/link-share.png"
-            width={375}
-          />
+          {/* Spacer */}
+          <div className="h-8" />
+
+          <div className="flex justify-center">
+            <Image
+              alt="Link Sharing"
+              draggable={false}
+              height={400}
+              objectFit="contain"
+              src="/link-share.png"
+              width={375}
+            />
+          </div>
         </div>
       </div>
 
