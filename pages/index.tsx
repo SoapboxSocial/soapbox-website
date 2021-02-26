@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import AppStoreButton from "../components/app-store-button";
 import Meta from "../components/meta";
 
@@ -10,7 +11,7 @@ export default function HomePage() {
       <div className="bg-white rounded-room relative overflow-hidden lg:col-span-2">
         <div className="pt-10 px-10">
           {" "}
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-2 gap-8 relative">
             <div className="text-center lg:text-left">
               <img
                 alt="Soapbox"
@@ -19,6 +20,12 @@ export default function HomePage() {
                 loading="eager"
                 src="/brand.png"
               />
+
+              <Link href="/blog">
+                <a className="hidden lg:inline absolute top-0 right-0 text-gray-700">
+                  Blog
+                </a>
+              </Link>
 
               {/* Spacer */}
               <div className="h-8" />
