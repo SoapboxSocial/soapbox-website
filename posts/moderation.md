@@ -1,6 +1,6 @@
 ---
 title: Moderation Features
-date: "2020-12-28"
+date: "2020-12-18"
 summary: With great power comes great responsibility!
 authors: [{ displayName: "Team Soapbox", image: "/team.png" }]
 ---
