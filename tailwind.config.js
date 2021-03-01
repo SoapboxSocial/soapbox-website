@@ -32,6 +32,7 @@ module.exports = {
         tertiary: "0.3",
       },
       borderRadius: {
+        button: "0.9375rem",
         room: "1.85rem",
       },
     },

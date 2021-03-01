@@ -21,30 +21,37 @@ export default function RoomPreview({
   ],
 }) {
   return (
-    <div className="room">
-      <div className="room-title">{roomName}</div>
+    <article className="room bg-white rounded-room p-5">
+      <h2
+        className="text-title2 font-bold"
+        style={{ marginBottom: "1.875rem" }}
+      >
+        {roomName}
+      </h2>
+
       <div className="flex items-center justify-between">
         <div className="flex -space-x-2">
           {roomMembers.slice(0, 3).map((member, i) => (
             <div key={i} className="flex room-head overflow-visible">
               <Image
-                height={50}
-                width={50}
-                className="room-head object-cover object-center rounded-full"
-                draggable="false"
-                src={member.image}
                 alt={member.displayName}
+                className="h-10 w-10 room-head object-cover object-center rounded-full"
+                draggable="false"
+                height={40}
+                src={member.image}
+                width={40}
               />
             </div>
           ))}
         </div>
+
         <a
           href={buttonLink}
-          className="no-underline room-button focus:outline-none focus:ring-4"
+          className="room-button bg-soapbox rounded-button py-2 px-5 text-title3 text-white font-semibold no-underline focus:outline-none focus:ring-4"
         >
           {buttonText}
         </a>
       </div>
-    </div>
+    </article>
   );
 }

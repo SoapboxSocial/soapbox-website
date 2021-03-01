@@ -2,7 +2,7 @@ import dayjs from "dayjs";
 
 export default function PostPreview({ title, date, authors }) {
   return (
-    <article className="room">
+    <article className="room bg-white rounded-room p-5">
       <div
         className="text-footnote font-semibold secondary"
         style={{ marginBottom: 10 }}
@@ -10,7 +10,10 @@ export default function PostPreview({ title, date, authors }) {
         {dayjs(date).format("MMMM D, YYYY")}
       </div>
 
-      <h2 className="text-title2 font-bold" style={{ marginBottom: 30 }}>
+      <h2
+        className="text-title2 font-bold"
+        style={{ marginBottom: "1.875rem" }}
+      >
         {title}
       </h2>
 
@@ -30,8 +33,8 @@ export default function PostPreview({ title, date, authors }) {
           ))}
         </div>
 
-        <div className="no-underline room-button">
-          <span className="text-title3">Read</span>
+        <div className="room-button bg-soapbox rounded-button py-2 px-5 text-title3 text-white font-semibold no-underline">
+          Read
         </div>
       </div>
     </article>
