@@ -117,31 +117,31 @@ body {
   }
 
   .text-title1 {
-    font-size: 28px;
-    line-height: 33px;
-    letter-spacing: 0.36px;
+    font-size: 1.75rem;
+    line-height: 2.0625rem;
+    letter-spacing: 0.0225rem;
   }
 
   .text-title2 {
-    font-size: 24px;
-    line-height: 28px;
-    letter-spacing: 0.35px;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.021875rem;
   }
 
   .text-title3 {
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: 0.38px;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.02375rem;
   }
 
   .text-body {
-    font-size: 17px;
-    line-height: 22px;
+    font-size: 1.0625rem;
+    line-height: 1.375rem;
   }
 
   .text-footnote {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
   }
 
   .primary {

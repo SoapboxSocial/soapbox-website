@@ -9,7 +9,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export default function Blog({ posts }: Props) {
   return (
-    <main className="py-20 px-5">
+    <main className="p-5">
       <Meta title="Our Soapbox" url="https://soapbox.social/blog" />
 
       <div className="max-w-sm mx-auto">
@@ -23,7 +23,7 @@ export default function Blog({ posts }: Props) {
           <p className="text-prose-secondary">A blog by the Soapbox team.</p>
         </div>
 
-        <div className="h-20" />
+        <div className="h-8" />
 
         <ul className="space-y-5">
           {posts
