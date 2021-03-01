@@ -22,10 +22,10 @@ Soapbox Minis allow users to add a game, a poll, or other interactive components
 
 ![Would You Rather Game](/blog/minis.png)
 
-We designed Minis to complement smaller and more intimate room sizes, users can now engage with one another in a way that has yet to be done before in the social audio scene. We’re beyond excited to hear how Soapboxers will use Minis while chatting with current and new friends!
+We designed Minis to complement smaller and more intimate room sizes, and users can now engage with one another in a way that hasn’t been done before in the social audio scene. We’re beyond excited to hear how Soapboxers will use Minis while chatting with current and new friends!
 
-## Get Creative
+## Rewarding creativity
 
-In addition to the release of Soapbox Minis, our team has also [built an Open-source SDK](https://github.com/SoapboxSocial/minis.js) to empower developers to build their very own Minis that interact with a live Soapbox room.
+In addition to the release of Soapbox Minis, our team has also [built an open-source SDK](https://github.com/SoapboxSocial/minis.js) so developers can build their very own Minis that interact with live Soapbox rooms.
 
-Soapbox truly wouldn’t be where it is today without feedback and support from our users. Thank you to everyone that has spoken up, shared the app with friends, and encouraged the success of the app. We would love to hear from you, if you’re an enthusiast or developer and have a great idea, [don’t hesitate to reach out](mailto:support@soapbox.social).
+Soapbox truly wouldn’t be where it is today without feedback and support from our users. Thank you to everyone that has spoken up, shared the app with friends and generally encouraged its success. We would love to hear from you! If you’re an enthusiast or developer and have a great idea, [don’t hesitate to reach out](mailto:support@soapbox.social).
