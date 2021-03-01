@@ -92,6 +92,15 @@ body {
   color: var(--white);
 }
 
+@layer components {
+  .footer-item {
+    @apply mr-4 mb-2;
+  }
+  .footer-item-link {
+    @apply opacity-25 focus:outline-none focus:opacity-75 hover:opacity-75;
+  }
+}
+
 @layer utilities {
   .crop::before,
   .crop::after {
@@ -106,13 +115,44 @@ body {
   .crop::after {
     margin-bottom: calc((1 - 1.85) * 0.5em);
   }
-}
 
-@layer components {
-  .footer-item {
-    @apply mr-4 mb-2;
+  .text-title1 {
+    font-size: 28px;
+    line-height: 33px;
+    letter-spacing: 0.36px;
   }
-  .footer-item-link {
-    @apply opacity-25 focus:outline-none focus:opacity-75 hover:opacity-75;
+
+  .text-title2 {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.35px;
+  }
+
+  .text-title3 {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.38px;
+  }
+
+  .text-body {
+    font-size: 17px;
+    line-height: 22px;
+  }
+
+  .text-footnote {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .primary {
+    @apply text-black;
+  }
+
+  .secondary {
+    @apply text-label-light text-opacity-secondary;
+  }
+
+  .tertiary {
+    @apply text-label-light text-opacity-tertiary;
   }
 }

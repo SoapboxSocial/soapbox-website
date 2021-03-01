@@ -1,6 +1,6 @@
+import dayjs from "dayjs";
 import type { GetStaticPaths, InferGetStaticPropsType } from "next";
 import hydrate from "next-mdx-remote/hydrate";
-import Image from "next/image";
 import Meta from "../../components/meta";
 import { APP_STORE_URL, TWITTER_URL } from "../../constants";
 import Apple from "../../icons/apple";
@@ -29,20 +29,20 @@ export default function Post({ slug, meta, source }: Props) {
           </h1>
 
           <p className="text-prose-secondary">
-            <strong>{meta.date}</strong>
+            <strong>{dayjs(meta.date).format("MMMM D, YYYY")}</strong>
           </p>
 
           {hasAuthors && (
             <div className="flex -space-x-2">
               {meta.authors.map((member, i: number) => (
                 <div key={i} className="flex room-head overflow-visible">
-                  <Image
-                    height={50}
-                    width={50}
-                    className="room-head object-cover object-center rounded-full"
-                    draggable="false"
-                    src={member.image}
+                  <img
                     alt={member.displayName}
+                    className="h-10 w-10 room-head object-cover object-center rounded-full"
+                    draggable="false"
+                    height={40}
+                    src={member.image}
+                    width={40}
                   />
                 </div>
               ))}

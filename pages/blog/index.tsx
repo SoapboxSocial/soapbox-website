@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import type { InferGetStaticPropsType } from "next";
 import Link from "next/link";
 import Meta from "../../components/meta";
@@ -25,19 +26,21 @@ export default function Blog({ posts }: Props) {
         <div className="h-20" />
 
         <ul className="space-y-5">
-          {posts.map(({ slug, meta }, i) => (
-            <li key={i}>
-              <Link href={`/blog/${slug}`}>
-                <a>
-                  <PostPreview
-                    authors={meta.authors}
-                    date={meta.date}
-                    title={meta.title}
-                  />
-                </a>
-              </Link>
-            </li>
-          ))}
+          {posts
+            .sort((a, b) => (dayjs(a.meta.date).isAfter(b.meta.date) ? -1 : 1))
+            .map(({ slug, meta }, i) => (
+              <li key={i}>
+                <Link href={`/blog/${slug}`}>
+                  <a>
+                    <PostPreview
+                      authors={meta.authors}
+                      date={meta.date}
+                      title={meta.title}
+                    />
+                  </a>
+                </Link>
+              </li>
+            ))}
         </ul>
       </div>
     </main>
