@@ -2,7 +2,11 @@
 title: Private Rooms & Room Renovations
 date: "2020-11-25"
 summary: Today we added some major improvements to private rooms
-authors: [{ displayName: "Team Soapbox", image: "/team.png" }]
+authors:
+  [
+    { displayName: "Dean", image: "/dean.png" },
+    { displayName: "Jeff", image: "/jeff.png" },
+  ]
 thumb: /blog/private-rooms.png
 ---
 

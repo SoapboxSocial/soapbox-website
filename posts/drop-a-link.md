@@ -2,7 +2,11 @@
 title: Drop a Link!
 date: "2021-01-10"
 summary: Sometimes it can be hard to stay interested in a conversation when you haven’t seen what the speaker is referencing, so we added link sharing to keep everyone on the same page.
-authors: [{ displayName: "Team Soapbox", image: "/team.png" }]
+authors:
+  [
+    { displayName: "Dean", image: "/dean.png" },
+    { displayName: "Jeff", image: "/jeff.png" },
+  ]
 thumb: /blog/shared-links.png
 ---
 
