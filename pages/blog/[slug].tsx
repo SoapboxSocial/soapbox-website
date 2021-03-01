@@ -20,7 +20,7 @@ export default function Post({ slug, meta, source }: Props) {
         title={meta.title}
         description={meta.summary}
         url={`https://soapbox.social/blog/${slug}`}
-        image={`https://soapbox.social${meta.thumb}`}
+        image={`https://soapbox.social${meta?.thumb ?? "/thumb.jpg"}`}
         twitterCardType="summary_large_image"
       />
 
