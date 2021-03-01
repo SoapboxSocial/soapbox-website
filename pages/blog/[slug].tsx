@@ -20,6 +20,8 @@ export default function Post({ slug, meta, source }: Props) {
         title={meta.title}
         description={meta.summary}
         url={`https://soapbox.social/blog/${slug}`}
+        image={`https://soapbox.social${meta.thumb}`}
+        twitterCardType="summary_large_image"
       />
 
       <div className="max-w-2xl w-full mx-auto p-5 md:p-10 bg-white rounded-room">
@@ -29,7 +31,11 @@ export default function Post({ slug, meta, source }: Props) {
           </h1>
 
           <p className="text-prose-secondary">
-            <strong>{dayjs(meta.date).format("MMMM D, YYYY")}</strong>
+            <strong>
+              <time dateTime={dayjs(meta.date).format()}>
+                {dayjs(meta.date).format("MMMM D, YYYY")}
+              </time>
+            </strong>
           </p>
 
           {hasAuthors && (
