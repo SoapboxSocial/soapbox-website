@@ -1,9 +1,9 @@
 ---
 title: Soapbox Links and Screen Recording Notifications
 date: "2020-12-28"
-summary: We’re bringing stories to the feed of Soapbox
+summary: Each day our team strives to make Soapbox more user friendly and fluid. By popular request, we added a sharing button so users can hop into a room directly from a link!
 authors: [{ displayName: "Team Soapbox", image: "/team.png" }]
-thumb: /blog/stories.png
+thumb: /blog/room-links.png
 ---
 
 Each day our team strives to make Soapbox more user friendly and fluid. By popular request, we added a sharing button so users can hop into a room directly from a link! We knew how important this feature was to seamlessly invite others to a room outside of the app.
