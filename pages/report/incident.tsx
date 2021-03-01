@@ -173,7 +173,7 @@ export default function IncidentPage() {
           </div>
 
           <button
-            className="py-4 px-6 bg-brand text-white text-2xl font-medium rounded-2xl  w-full focus:outline-none focus:ring-4"
+            className="py-4 px-6 bg-soapbox text-white text-2xl font-medium rounded-2xl  w-full focus:outline-none focus:ring-4"
             type="submit"
             disabled={isSubmitting}
           >

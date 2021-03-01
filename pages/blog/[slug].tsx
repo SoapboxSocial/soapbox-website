@@ -77,7 +77,7 @@ export default function Post({ slug, meta, source }: Props) {
 
           <div className="max-w-md mx-auto sm:flex justify-center sm:space-x-2 space-y-4 sm:space-y-0">
             <a
-              className="py-2 px-4 bg-brand text-white rounded-full flex justify-center items-center space-x-2 focus:outline-none focus:ring-4"
+              className="py-2 px-4 bg-soapbox text-white rounded-full flex justify-center items-center space-x-2 focus:outline-none focus:ring-4"
               href={APP_STORE_URL}
               aria-label="Download on the App Store"
             >
@@ -86,7 +86,7 @@ export default function Post({ slug, meta, source }: Props) {
             </a>
 
             <a
-              className="py-2 px-4 bg-brand text-white rounded-full flex justify-center items-center space-x-2 focus:outline-none focus:ring-4"
+              className="py-2 px-4 bg-soapbox text-white rounded-full flex justify-center items-center space-x-2 focus:outline-none focus:ring-4"
               href={TWITTER_URL}
               aria-label="Download on the App Store"
             >

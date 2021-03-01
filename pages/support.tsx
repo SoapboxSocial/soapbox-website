@@ -16,7 +16,7 @@ export default function SupportPage() {
         <div className="h-8" />
 
         <a
-          className="py-4 px-8 bg-brand text-white rounded-full inline-flex justify-center items-center space-x-3 focus:outline-none focus:ring-4"
+          className="py-4 px-8 bg-soapbox text-white rounded-full inline-flex justify-center items-center space-x-3 focus:outline-none focus:ring-4"
           href={CONTACT_URL}
         >
           <span className="text-2xl font-medium">Contact us</span>

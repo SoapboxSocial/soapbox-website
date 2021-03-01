@@ -65,7 +65,7 @@ export default function UserPage({ profile }: Props) {
         <div className="text-center">
           <a
             href={APP_LINK}
-            className="inline-flex px-6 py-2 text-xl font-medium rounded-full bg-brand text-white"
+            className="inline-flex px-6 py-2 text-xl font-medium rounded-full bg-soapbox text-white"
           >
             Follow
           </a>
