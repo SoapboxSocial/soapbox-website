@@ -2,11 +2,6 @@
 title: Soapbox Links and Screen Recording Notifications
 date: "2020-12-28"
 summary: Each day our team strives to make Soapbox more user friendly and fluid. By popular request, we added a sharing button so users can hop into a room directly from a link!
-authors:
-  [
-    { displayName: "Dean", image: "/dean.png" },
-    { displayName: "Jeff", image: "/jeff.png" },
-  ]
 thumb: /blog/room-links.png
 ---
 

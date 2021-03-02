@@ -2,11 +2,6 @@
 title: Hop on Our Soapbox
 date: "2021-02-01"
 summary: Soapbox has been on the App Store almost three months now. We’ve come a long way since we started working on this app and launched it on TestFlight. Today, we are excited to launch Soapbox, Version 2!
-authors:
-  [
-    { displayName: "Dean", image: "/dean.png" },
-    { displayName: "Jeff", image: "/jeff.png" },
-  ]
 ---
 
 Soapbox has been on the App Store almost three months now. We’ve come a long way since we started working on this app and launched it on TestFlight. Today, we are excited to launch **Soapbox, Version 2**!

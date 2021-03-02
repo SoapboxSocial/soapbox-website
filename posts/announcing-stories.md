@@ -2,11 +2,6 @@
 title: Announcing Stories
 date: "2020-12-15"
 summary: We’re bringing stories to the feed of Soapbox
-authors:
-  [
-    { displayName: "Dean", image: "/dean.png" },
-    { displayName: "Jeff", image: "/jeff.png" },
-  ]
 thumb: /blog/stories.png
 ---
 

@@ -2,11 +2,6 @@
 title: Introducing Soapbox Minis
 date: "2021-03-1"
 summary: Today, we’re introducing Minis to intensify user interaction within rooms and to strengthen the drop-in audio experience for the Soapbox community.
-authors:
-  [
-    { displayName: "Dean", image: "/dean.png" },
-    { displayName: "Jeff", image: "/jeff.png" },
-  ]
 thumb: /blog/minis.png
 ---
 

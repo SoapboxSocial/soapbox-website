@@ -12,7 +12,11 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>;
 export default function Post({ slug, meta, source }: Props) {
   const content = hydrate(source);
 
-  const hasAuthors = meta?.authors?.length > 0;
+  const defaultAuthors = [
+    { displayName: "Dean", image: "/dean.png" },
+    { displayName: "Jeff", image: "/jeff.png" },
+    { displayName: "Mike", image: "/mike.png" },
+  ];
 
   return (
     <main className="p-5">
@@ -38,22 +42,20 @@ export default function Post({ slug, meta, source }: Props) {
             </strong>
           </p>
 
-          {hasAuthors && (
-            <div className="flex -space-x-2">
-              {meta.authors.map((member, i: number) => (
-                <div key={i} className="flex room-head overflow-visible">
-                  <img
-                    alt={member.displayName}
-                    className="h-10 w-10 room-head object-cover object-center rounded-full"
-                    draggable="false"
-                    height={40}
-                    src={member.image}
-                    width={40}
-                  />
-                </div>
-              ))}
-            </div>
-          )}
+          <div className="flex -space-x-2">
+            {defaultAuthors.map((member, i) => (
+              <div key={i} className="flex room-head overflow-visible">
+                <img
+                  alt={member.displayName}
+                  className="h-10 w-10 room-head object-cover object-center rounded-full"
+                  draggable="false"
+                  height={40}
+                  src={member.image}
+                  width={40}
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="h-8" />
