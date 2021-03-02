@@ -32,11 +32,7 @@ export default function Blog({ posts }: Props) {
               <li key={i}>
                 <Link href={`/blog/${slug}`}>
                   <a>
-                    <PostPreview
-                      authors={meta.authors}
-                      date={meta.date}
-                      title={meta.title}
-                    />
+                    <PostPreview date={meta.date} title={meta.title} />
                   </a>
                 </Link>
               </li>

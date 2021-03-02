@@ -1,6 +1,17 @@
 import dayjs from "dayjs";
 
-export default function PostPreview({ title, date, authors }) {
+type Props = {
+  title: string;
+  date: string;
+};
+
+export default function PostPreview({ title, date }: Props) {
+  const defaultAuthors = [
+    { displayName: "Dean", image: "/dean.png" },
+    { displayName: "Jeff", image: "/jeff.png" },
+    { displayName: "Mike", image: "/mike.png" },
+  ];
+
   return (
     <article className="room bg-white rounded-room p-5">
       <div
@@ -19,7 +30,7 @@ export default function PostPreview({ title, date, authors }) {
 
       <div className="flex items-center justify-between">
         <div className="flex -space-x-2">
-          {authors.map((member, i) => (
+          {defaultAuthors.map((member, i) => (
             <div key={i} className="flex room-head overflow-visible">
               <img
                 alt={member.displayName}
