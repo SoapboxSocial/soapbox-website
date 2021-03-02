@@ -24,7 +24,7 @@ Soapbox Minis allow users to add a game, a poll, or other interactive components
 
 We designed Minis to complement smaller and more intimate room sizes, and users can now engage with one another in a way that hasn’t been done before in the social audio scene. We’re beyond excited to hear how Soapboxers will use Minis while chatting with current and new friends!
 
-## Rewarding creativity
+## Get creative
 
 In addition to the release of Soapbox Minis, our team has also [built an open-source SDK](https://github.com/SoapboxSocial/minis.js) so developers can build their very own Minis that interact with live Soapbox rooms.
 
