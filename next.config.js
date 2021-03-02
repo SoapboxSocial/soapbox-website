@@ -12,6 +12,11 @@ module.exports = withMDX({
           "https://app.pitch.com/app/presentation/18786779-94a0-468a-b077-46bf99e9cc7b/32695aa9-d706-4579-a514-702222601d84",
         permanent: false,
       },
+      {
+        source: "/app",
+        destination: "https://apps.apple.com/us/app/soapbox-talk-with-anyone/id1529283270",
+        permanent: false,
+      },
     ];
   },
 });
