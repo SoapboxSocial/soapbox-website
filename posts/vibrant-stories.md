@@ -1,6 +1,6 @@
 ---
 title: Vibrant Stories
-date: "2020-03-09"
+date: "2021-03-09"
 summary: Stories has gotten a fresh new look and feel to spruce up your voices.
 thumb: /blog/vibrant-stories.png
 ---
