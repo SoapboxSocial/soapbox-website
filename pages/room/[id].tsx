@@ -1,5 +1,5 @@
 import { GetServerSideProps } from "next";
-import { Fragment } from "react";
+import { Fragment, useMemo } from "react";
 import Meta from "../../components/meta";
 import RoomPreview from "../../components/room-preview";
 import { APP_ID, APP_NAME } from "../../constants";
@@ -14,11 +14,21 @@ export default function RoomPage({ room }: Props) {
 
   const memberNames = room.members.map((_member) => _member?.displayName);
 
+  const roomMembers = useMemo(() => {
+    if (memberNames.length >= 3)
+      return `${memberNames[0]}, ${memberNames[1]} and ${memberNames[2]}`;
+
+    if (memberNames.length === 2)
+      return `${memberNames[0]} and ${memberNames[1]}`;
+
+    return memberNames[0];
+  }, [memberNames]);
+
   return (
     <main className="py-20 px-5">
       <Meta
         appleItunesApp={`app-id=${APP_ID}, app-argument: ${APP_LINK}`}
-        title={`Soapbox: Join ${room.name} with ${memberNames.join(", ")}`}
+        title={`Soapbox: Join ${room.name} with ${roomMembers}`}
         url={`https://soapbox.social/room/${room.id}`}
         extra={
           <Fragment>
