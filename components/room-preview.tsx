@@ -7,15 +7,15 @@ export default function RoomPreview({
   buttonLink = APP_STORE_URL,
   roomMembers = [
     {
-      displayName: "Dean",
+      display_name: "Dean",
       image: "/dean.png",
     },
     {
-      displayName: "Jeff",
+      display_name: "Jeff",
       image: "/jeff.png",
     },
     {
-      displayName: "Unicorn",
+      display_name: "Unicorn",
       image: "/unicorn.png",
     },
   ],
@@ -34,7 +34,7 @@ export default function RoomPreview({
           {roomMembers.slice(0, 3).map((member, i) => (
             <div key={i} className="flex room-head overflow-visible">
               <Image
-                alt={member.displayName}
+                alt={member.display_name}
                 className="h-10 w-10 room-head object-cover object-center rounded-full"
                 draggable="false"
                 height={40}

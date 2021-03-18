@@ -12,7 +12,7 @@ type Props = {
 export default function RoomPage({ room }: Props) {
   const APP_LINK = `soapbox://room/${room.id}`;
 
-  const memberNames = room.members.map((_member) => _member?.displayName);
+  const memberNames = room.members.map((_member) => _member?.display_name);
 
   const roomMembers = useMemo(() => {
     if (memberNames.length >= 3)
@@ -28,7 +28,7 @@ export default function RoomPage({ room }: Props) {
     <main className="py-20 px-5">
       <Meta
         appleItunesApp={`app-id=${APP_ID}, app-argument: ${APP_LINK}`}
-        title={`Soapbox: Join ${room.name} with ${roomMembers}`}
+        title={`Join ${room?.name ? `"${room.name}" with` : ""} ${roomMembers}`}
         url={`https://soapbox.social/room/${room.id}`}
         extra={
           <Fragment>

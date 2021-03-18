@@ -1,10 +1,9 @@
 export type Member = {
-  displayName: string;
+  display_name: string;
   id: number;
   image: string;
-  muted: boolean;
-  role: string;
-  ssrc: number;
+  muted?: boolean;
+  role?: number;
 };
 
 export type Group = {
