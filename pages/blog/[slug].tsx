@@ -13,9 +13,9 @@ export default function Post({ slug, meta, source }: Props) {
   const content = hydrate(source);
 
   const defaultAuthors = [
-    { displayName: "Dean", image: "/dean.png" },
-    { displayName: "Jeff", image: "/jeff.png" },
-    { displayName: "Mike", image: "/mike.png" },
+    { display_name: "Dean", image: "/dean.png" },
+    { display_name: "Jeff", image: "/jeff.png" },
+    { display_name: "Mike", image: "/mike.png" },
   ];
 
   return (
@@ -46,7 +46,7 @@ export default function Post({ slug, meta, source }: Props) {
             {defaultAuthors.map((member, i) => (
               <div key={i} className="flex room-head overflow-visible">
                 <img
-                  alt={member.displayName}
+                  alt={member.display_name}
                   className="h-10 w-10 room-head object-cover object-center rounded-full"
                   draggable="false"
                   height={40}
