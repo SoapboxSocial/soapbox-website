@@ -1,8 +1,10 @@
 import dayjs from "dayjs";
+import { trackGoal } from "fathom-client";
 import type { GetStaticPaths, InferGetStaticPropsType } from "next";
 import hydrate from "next-mdx-remote/hydrate";
+import type { MouseEvent } from "react";
 import Meta from "../../components/meta";
-import { APP_STORE_URL, TWITTER_URL } from "../../constants";
+import { APP_STORE_URL, FATHOM_EVENTS, TWITTER_URL } from "../../constants";
 import Apple from "../../icons/apple";
 import Twitter from "../../icons/twitter";
 import { getAllPosts, getPostBySlug } from "../../lib";
@@ -17,6 +19,14 @@ export default function Post({ slug, meta, source }: Props) {
     { display_name: "Jeff", image: "/jeff.png" },
     { display_name: "Mike", image: "/mike.png" },
   ];
+
+  const handleOnClick = (e: MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+
+    trackGoal(FATHOM_EVENTS["Clicked AppStore Link (Blog)"], 0);
+
+    window.location.href = e.currentTarget.href;
+  };
 
   return (
     <main className="p-5">
@@ -81,6 +91,7 @@ export default function Post({ slug, meta, source }: Props) {
             <a
               className="py-2 px-4 bg-soapbox text-white rounded-full flex justify-center items-center space-x-2 focus:outline-none focus:ring-4"
               href={APP_STORE_URL}
+              onClick={handleOnClick}
               aria-label="Download on the App Store"
             >
               <Apple size={24} className="-mt-0.5" />

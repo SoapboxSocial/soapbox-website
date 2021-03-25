@@ -1,13 +1,13 @@
 import { trackGoal } from "fathom-client";
 import type { MouseEvent } from "react";
-import { APP_STORE_URL } from "../constants";
+import { APP_STORE_URL, FATHOM_EVENTS } from "../constants";
 import Apple from "../icons/apple";
 
 export default function AppStoreButton() {
   const handleOnClick = (e: MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
 
-    trackGoal("NUSYSEKO", 0);
+    trackGoal(FATHOM_EVENTS["Clicked AppStore Link (Home)"], 0);
 
     window.location.href = e.currentTarget.href;
   };
