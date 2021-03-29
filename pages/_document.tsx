@@ -1,5 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import { jsonLdScriptProps } from "react-schemaorg";
+import { Organization, MobileApplication } from "schema-dts";
 
 export default class SoapboxDocument extends Document {
   render() {
@@ -45,7 +46,7 @@ export default class SoapboxDocument extends Document {
 
           {/* Structured Text Tags */}
           <script
-            {...jsonLdScriptProps({
+            {...jsonLdScriptProps<Organization>({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Soapbox",
@@ -54,17 +55,26 @@ export default class SoapboxDocument extends Document {
             })}
           />
           <script
-            {...jsonLdScriptProps({
+            {...jsonLdScriptProps<MobileApplication>({
               "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
+              "@type": "MobileApplication",
               name: "Soapbox: Talk with anyone",
               operatingSystem: "iOS",
               applicationCategory: "SocialNetworkingApplication",
+              installUrl:
+                "https://apps.apple.com/us/app/soapbox-talk-with-anyone/id1529283270",
+              aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.9",
+                ratingCount: 77,
+              },
             })}
           />
         </Head>
+
         <body className="flex flex-col min-h-screen">
           <Main />
+
           <NextScript />
         </body>
       </Html>

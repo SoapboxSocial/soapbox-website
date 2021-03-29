@@ -1,5 +1,4 @@
 import type { AppProps } from "next/app";
-import { Fragment } from "react";
 import Footer from "../components/footer";
 import Navigation from "../components/navigation";
 import useFathom from "../hooks/useFathom";
@@ -9,12 +8,12 @@ export default function SoapboxApp({ Component, pageProps }: AppProps) {
   useFathom();
 
   return (
-    <Fragment>
+    <div className="flex flex-col min-h-screen">
       <Navigation />
 
       <Component {...pageProps} />
 
       <Footer />
-    </Fragment>
+    </div>
   );
 }
