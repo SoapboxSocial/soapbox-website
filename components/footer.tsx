@@ -3,7 +3,7 @@ import { MEDIA_KIT_URL, TWITTER_URL } from "../constants";
 
 export default function Footer() {
   return (
-    <footer className="text-sm px-5 pb-5">
+    <footer className="lg:text-sm px-5 pb-5">
       <ul className="w-full flex flex-wrap justify-center -mr-4 -mb-2">
         <li className="footer-item">
           <a className="footer-item-link" href={TWITTER_URL}>
