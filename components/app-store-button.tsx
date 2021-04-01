@@ -14,13 +14,12 @@ export default function AppStoreButton() {
 
   return (
     <a
-      className="py-4 px-6 bg-white bg-opacity-20 text-white rounded-full inline-flex justify-center items-center space-x-3 focus:outline-none focus:ring-4"
+      className="inline-flex focus:outline-none focus:ring-4 rounded-xl"
       href={APP_STORE_URL}
       aria-label="Download on the App Store"
       onClick={handleOnClick}
     >
-      <Apple size={32} className="-mt-0.5" />
-      <span className="text-2xl font-medium">App Store</span>
+      <img className="h-16" src="/app-store-badge.svg" />
     </a>
   );
 }
