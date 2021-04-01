@@ -11,7 +11,7 @@ export default function HomePage() {
 
       <header className="w-full">
         <div className="max-w-lg sm:max-w-2xl lg:max-w-4xl mx-auto">
-          <nav className="px-8 py-5">
+          <nav className="px-8 pt-5">
             <ul className="flex justify-between items-center w-full">
               <li>
                 <img
@@ -56,19 +56,19 @@ export default function HomePage() {
             </div>
 
             <div className="place-self-center">
-              <div className="inline-flex relative m-8">
+              <div className="inline-flex mt-4 mb-2 relative">
                 <div className="overflow-visible-next-image">
                   <Image
                     alt="Soapbox App"
                     draggable={false}
-                    height={866 * 0.72}
+                    height={866 * 0.7}
                     objectFit="cover"
                     quality={100}
                     priority
                     loading="eager"
                     className="transform-gpu -rotate-12"
                     src="/device-screenshot-home.png"
-                    width={428 * 0.72}
+                    width={428 * 0.7}
                   />
                 </div>
 
