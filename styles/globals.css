@@ -127,7 +127,3 @@ body {
     @apply text-label-light text-opacity-tertiary;
   }
 }
-
-.prose img {
-  border-radius: 15px;
-}
