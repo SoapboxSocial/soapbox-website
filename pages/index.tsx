@@ -24,7 +24,7 @@ export default function HomePage() {
 
             <li>
               <Link href="/blog">
-                <a className="text-gray-200 text-sm">Blog</a>
+                <a className="text-white text-sm">Blog</a>
               </Link>
             </li>
           </ul>
@@ -97,7 +97,8 @@ export default function HomePage() {
 
       <style jsx global>{`
         body {
-          background: linear-gradient(140deg, #8359fe 0%, #4308c3 100%);
+          background: #8359fe;
+          color: #fff;
         }
 
         .overflow-visible-next-image div {
