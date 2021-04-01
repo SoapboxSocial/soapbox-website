@@ -9,7 +9,7 @@ type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export default function Blog({ posts }: Props) {
   return (
-    <main className="p-5">
+    <main className="flex-1 w-full p-5">
       <Meta title="Our Soapbox" url="https://soapbox.social/blog" />
 
       <div className="max-w-lg mx-auto">
@@ -58,7 +58,9 @@ export default function Blog({ posts }: Props) {
                   )}
 
                   {typeof meta.summary === "string" && (
-                    <p className="text-base text-gray-500">{meta.summary}</p>
+                    <p className="text-base text-prose-secondary">
+                      {meta.summary}
+                    </p>
                   )}
                 </article>
               </li>

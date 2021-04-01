@@ -29,7 +29,7 @@ export default function Post({ slug, meta, source }: Props) {
   };
 
   return (
-    <main className="p-5">
+    <main className="flex-1 w-full p-5">
       <Meta
         title={meta.title}
         description={meta.summary}
@@ -38,44 +38,46 @@ export default function Post({ slug, meta, source }: Props) {
         twitterCardType="summary_large_image"
       />
 
-      <div className="max-w-2xl w-full mx-auto p-5 md:p-10 bg-white rounded-room">
-        <div className="space-y-4">
-          <h1 className="text-4xl font-extrabold leading-none text-prose-primary">
-            {meta.title}
-          </h1>
+      <div className="h-8" />
 
-          <p className="text-prose-secondary">
-            <strong>
+      <div className="max-w-lg mx-auto">
+        <div className="">
+          <div className="space-y-4">
+            <p className="leading-none text-gray-400">
               <time dateTime={dayjs(meta.date).format()}>
                 {dayjs(meta.date).format("MMMM D, YYYY")}
               </time>
-            </strong>
-          </p>
+            </p>
 
-          <div className="flex -space-x-2">
-            {defaultAuthors.map((member, i) => (
-              <div key={i} className="flex room-head overflow-visible">
-                <img
-                  alt={member.display_name}
-                  className="h-10 w-10 room-head object-cover object-center rounded-full"
-                  draggable="false"
-                  height={40}
-                  src={member.image}
-                  width={40}
-                />
-              </div>
-            ))}
+            <h1 className="text-4xl font-extrabold leading-none text-prose-primary">
+              {meta.title}
+            </h1>
+
+            <div className="flex -space-x-2">
+              {defaultAuthors.map((member, i) => (
+                <div key={i} className="flex room-head overflow-visible">
+                  <img
+                    alt={member.display_name}
+                    className="h-10 w-10 room-head object-cover object-center rounded-full"
+                    draggable="false"
+                    height={40}
+                    src={member.image}
+                    width={40}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
+
+          <div className="h-8" />
+
+          <div className="prose max-w-none">{content}</div>
         </div>
-
-        <div className="h-8" />
-
-        <div className="prose max-w-none">{content}</div>
       </div>
 
       <div className="h-4" />
 
-      <div className="max-w-2xl w-full mx-auto p-5 md:p-10 bg-white rounded-room">
+      <div className="p-5 md:p-10">
         <div className="text-center text-prose-secondary">
           <p className="text-4xl font-extrabold leading-none text-prose-primary">
             Join Soapbox
@@ -109,6 +111,12 @@ export default function Post({ slug, meta, source }: Props) {
           </div>
         </div>
       </div>
+
+      <style jsx global>{`
+        body {
+          background-color: #fff;
+        }
+      `}</style>
     </main>
   );
 }
