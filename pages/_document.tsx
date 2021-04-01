@@ -5,7 +5,7 @@ import { Organization, MobileApplication } from "schema-dts";
 export default class SoapboxDocument extends Document {
   render() {
     return (
-      <Html lang="en" className="text-base sm:text-xl overflow-x-hidden">
+      <Html lang="en" className="text-base sm:text-xl">
         <Head>
           {/* Font Preload Tags */}
           <link
