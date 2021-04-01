@@ -68,7 +68,7 @@ body {
     @apply mr-4 mb-2;
   }
   .footer-item-link {
-    @apply opacity-25 focus:outline-none focus:opacity-75 hover:opacity-75;
+    @apply opacity-75 focus:outline-none focus:opacity-100 hover:opacity-100;
   }
 }
 

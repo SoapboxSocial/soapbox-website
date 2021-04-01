@@ -31,8 +31,8 @@ export default function HomePage() {
         </nav>
       </header>
 
-      <main className="max-w-lg sm:max-w-2xl lg:max-w-4xl mx-auto flex-1">
-        <div className="px-8 pb-8 grid lg:grid-cols-2 gap-8">
+      <main className="max-w-lg sm:max-w-2xl lg:max-w-4xl mx-auto flex-1 w-full">
+        <div className="px-8 grid lg:grid-cols-2 gap-8">
           <div className="text-center lg:text-left pt-16">
             <h1 className="text-4xl font-bold text-white">
               Soapbox, Not Just a Conversation
