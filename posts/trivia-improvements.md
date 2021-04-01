@@ -1,6 +1,6 @@
 ---
 title: Trivia & Improvements
-date: "2020-03-26"
+date: "2021-03-26"
 summary: Introducing Trivia — a brand new mini that allows users to play trivia right in a room.
 thumb: /blog/trivia.png
 ---
