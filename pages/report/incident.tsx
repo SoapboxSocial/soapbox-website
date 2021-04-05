@@ -44,14 +44,14 @@ export default function IncidentPage() {
   };
 
   return (
-    <main className="p-5">
+    <main className="flex-1 w-full p-5">
       <Meta
         title="Report An Incident"
         extra={<meta name="robots" content="noindex" />}
         url="https://soapbox.social/report/incident"
       />
 
-      <div className="max-w-3xl w-full mx-auto p-5 md:p-10 bg-white rounded-room">
+      <div className="max-w-lg mx-auto">
         <form method="POST" onSubmit={handleSubmit(onSubmit)}>
           {/* Hidden */}
           <input
@@ -182,10 +182,16 @@ export default function IncidentPage() {
         </form>
       </div>
 
+      <style jsx global>{`
+        body {
+          background-color: #fff;
+        }
+      `}</style>
+
       <style jsx>{`
         label {
           display: block;
-          font-size: 20px;
+          font-size: 1rem;
           line-height: 24px;
           font-weight: 600;
           letter-spacing: 0.38px;
@@ -205,7 +211,7 @@ export default function IncidentPage() {
           background-color: var(--background);
           padding: 1rem 1.25rem;
 
-          font-size: 20px;
+          font-size: 1rem;
           line-height: 24px;
           font-weight: 500;
 
