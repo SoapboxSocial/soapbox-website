@@ -5,9 +5,9 @@ summary: We let you Flap with Friends, now we’re gonna let you Draw With Frien
 thumb: /blog/draw.png
 ---
 
-We let you [Flap with Friends](/blog/flap-with-friends), now we’re gonna let you Draw With Friends!
+We let you [Flap with Friends](/blog/flap-with-friends), and now we’re going to let you Draw With Friends!
 
-We are excited to release the new Draw With Friends Mini! Select a word to draw for friends, then watch them try to guess and make hilarious drawings for you. No Van Gogh skills are required. All you have to do is wiggle your finger to create a masterpiece for everyone in the room to guess.
+We are excited to release the new Draw With Friends Mini! Select a word to draw, then have your friends try and guess what you drew. No Van Gogh skills are needed. All you have to do is sketch with your finger to create a masterpiece!
 
 ![Draw Mini](/blog/draw.png)
 
