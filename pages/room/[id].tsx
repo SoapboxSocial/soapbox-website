@@ -30,6 +30,7 @@ export default function RoomPage({ room }: Props) {
         appleItunesApp={`app-id=${APP_ID}, app-argument: ${APP_LINK}`}
         title={`Join ${room?.name ? `"${room.name}" with` : ""} ${roomMembers}`}
         image={`https://soapbox.social/api/thumb/room?id=${room.id}`}
+        twitterCardType="summary_large_image"
         url={`https://soapbox.social/room/${room.id}`}
         extra={
           <Fragment>

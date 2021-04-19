@@ -6,19 +6,11 @@ import { sanitizeHtml } from "./sanitizer";
 const twOptions = { folder: "svg", ext: ".svg" };
 const emojify = (text: string) => twemoji.parse(text, twOptions);
 
-function getFont(fileName: string) {
-  const directory = join(process.cwd(), "fonts");
-
-  return readFileSync(directory + "/" + fileName);
-}
-
-const bold = getFont("SFRounded-Bold.woff2").toString("base64");
-
 function getCss() {
   return `
     @font-face {
       font-family: "SF Rounded Pro";
-      src: url(data:font/woff2;charset=utf-8;base64,${bold}) format('woff2');
+      src: url("https://soapbox.social/SFRounded-Bold.woff2");
       font-weight: bold;
       font-style: normal;
     }
