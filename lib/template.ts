@@ -1,5 +1,3 @@
-import { readFileSync } from "fs";
-import { join } from "path";
 import twemoji from "twemoji";
 import { Room } from "../types/shared";
 import { sanitizeHtml } from "./sanitizer";
