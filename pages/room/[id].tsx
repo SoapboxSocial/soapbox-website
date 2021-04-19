@@ -25,7 +25,7 @@ export default function RoomPage({ room }: Props) {
   }, [memberNames]);
 
   return (
-    <main className="py-20 px-5">
+    <main className="flex-1 w-full py-20 px-5">
       <Meta
         appleItunesApp={`app-id=${APP_ID}, app-argument: ${APP_LINK}`}
         title={`Join ${room?.name ? `"${room.name}" with` : ""} ${roomMembers}`}
@@ -52,7 +52,6 @@ export default function RoomPage({ room }: Props) {
 
       <div className="w-full mx-auto" style={{ maxWidth: 428 }}>
         <RoomPreview
-          buttonText="Join in"
           buttonLink={APP_LINK}
           roomName={room.name}
           roomMembers={room.members}
@@ -63,6 +62,27 @@ export default function RoomPage({ room }: Props) {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
+  if (process.env.NODE_ENV === "development") {
+    return {
+      props: {
+        room: {
+          name: "Room Name",
+          members: [
+            { display_name: "Dean", image: "/dean.png" },
+            { display_name: "Jeff", image: "/jeff.png" },
+            { display_name: "Mike", image: "/mike.png" },
+            { display_name: "Dean", image: "/dean.png" },
+            { display_name: "Jeff", image: "/jeff.png" },
+            { display_name: "Mike", image: "/mike.png" },
+            { display_name: "Jeff", image: "/jeff.png" },
+            { display_name: "Mike", image: "/mike.png" },
+            { display_name: "Mike", image: "/mike.png" },
+          ],
+        },
+      },
+    };
+  }
+
   const ENDPOINT = `https://metadata.soapbox.social/rooms/${params.id}`;
 
   const res = await fetch(ENDPOINT);
