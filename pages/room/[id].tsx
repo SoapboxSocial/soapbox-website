@@ -62,27 +62,6 @@ export default function RoomPage({ room }: Props) {
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  if (process.env.NODE_ENV === "development") {
-    return {
-      props: {
-        room: {
-          name: "Room Name",
-          members: [
-            { display_name: "Dean", image: "/dean.png" },
-            { display_name: "Jeff", image: "/jeff.png" },
-            { display_name: "Mike", image: "/mike.png" },
-            { display_name: "Dean", image: "/dean.png" },
-            { display_name: "Jeff", image: "/jeff.png" },
-            { display_name: "Mike", image: "/mike.png" },
-            { display_name: "Jeff", image: "/jeff.png" },
-            { display_name: "Mike", image: "/mike.png" },
-            { display_name: "Mike", image: "/mike.png" },
-          ],
-        },
-      },
-    };
-  }
-
   const ENDPOINT = `https://metadata.soapbox.social/rooms/${params.id}`;
 
   const res = await fetch(ENDPOINT);

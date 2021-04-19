@@ -1,4 +1,5 @@
 export type Member = {
+  username?: string;
   display_name: string;
   id: number;
   image: string;
