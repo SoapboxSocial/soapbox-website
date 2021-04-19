@@ -1,8 +1,8 @@
 import fs from "fs";
 import { NextApiRequest, NextApiResponse } from "next";
+import { getScreenshot } from "../../../lib/chromium";
+import { getHtml } from "../../../lib/template";
 import { Room } from "../../../types/shared";
-import { getScreenshot } from "../_lib/chromium";
-import { getHtml } from "../_lib/template";
 
 const isDev = !process.env.AWS_REGION;
 const isHtmlDebug = process.env.OG_HTML_DEBUG === "1";

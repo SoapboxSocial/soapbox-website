@@ -4,6 +4,9 @@ module.exports = withMDX({
   images: {
     domains: ["cdn.soapbox.social"],
   },
+  future: {
+    webpack5: true,
+  },
   async redirects() {
     return [
       {
@@ -14,7 +17,8 @@ module.exports = withMDX({
       },
       {
         source: "/app",
-        destination: "https://apps.apple.com/us/app/soapbox-talk-with-anyone/id1529283270",
+        destination:
+          "https://apps.apple.com/us/app/soapbox-talk-with-anyone/id1529283270",
         permanent: false,
       },
     ];

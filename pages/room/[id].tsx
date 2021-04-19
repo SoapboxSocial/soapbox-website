@@ -29,6 +29,7 @@ export default function RoomPage({ room }: Props) {
       <Meta
         appleItunesApp={`app-id=${APP_ID}, app-argument: ${APP_LINK}`}
         title={`Join ${room?.name ? `"${room.name}" with` : ""} ${roomMembers}`}
+        image={`https://soapbox.social/api/thumb/room?id=${room.id}`}
         url={`https://soapbox.social/room/${room.id}`}
         extra={
           <Fragment>
