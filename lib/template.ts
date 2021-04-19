@@ -110,7 +110,9 @@ export function getHtml(room: Room) {
 
   <body>
     <div class="room">
-      <div class="room-name">${emojify(sanitizeHtml(room.name))}</div>
+      <div class="room-name">${emojify(
+        sanitizeHtml(room.name ?? "Join in")
+      )}</div>
 
       <div class="room-members">
       ${room.members
