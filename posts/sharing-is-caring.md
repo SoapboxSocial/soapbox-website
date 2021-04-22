@@ -1,7 +1,7 @@
 ---
 title: Sharing is Caring
 date: "2021-04-22"
-summary: Lorem ipsum dolor sit amet
+summary: We've made it even easier to invite your friends to rooms
 thumb: /blog/new-share-sheet.png
 ---
 
