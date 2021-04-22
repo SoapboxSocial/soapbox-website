@@ -21,6 +21,16 @@ module.exports = withMDX({
           "https://apps.apple.com/us/app/soapbox-talk-with-anyone/id1529283270",
         permanent: false,
       },
+      {
+        source: "/room/:id",
+        destination: "https://soap.link/:id",
+        permanent: true,
+      },
+      {
+        source: "/user/:username",
+        destination: "https://soap.link/@:username",
+        permanent: true,
+      },
     ];
   },
 });
