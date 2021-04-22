@@ -3,6 +3,7 @@ import { trackGoal } from "fathom-client";
 import type { GetStaticPaths, InferGetStaticPropsType } from "next";
 import hydrate from "next-mdx-remote/hydrate";
 import type { MouseEvent } from "react";
+import { mdxComponents } from "../../components/mdx";
 import Meta from "../../components/meta";
 import { APP_STORE_URL, FATHOM_EVENTS, TWITTER_URL } from "../../constants";
 import Apple from "../../icons/apple";
@@ -12,7 +13,7 @@ import { getAllPosts, getPostBySlug } from "../../lib";
 type Props = InferGetStaticPropsType<typeof getStaticProps>;
 
 export default function Post({ slug, meta, source }: Props) {
-  const content = hydrate(source);
+  const content = hydrate(source, { components: mdxComponents });
 
   const defaultAuthors = [
     { display_name: "Dean", image: "/dean.png" },

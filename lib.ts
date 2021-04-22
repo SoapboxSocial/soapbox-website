@@ -2,6 +2,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import renderToString from "next-mdx-remote/render-to-string";
 import { join } from "path";
+import { mdxComponents } from "./components/mdx";
 
 const docsDirectory = join(process.cwd(), "posts");
 
@@ -11,7 +12,7 @@ export async function getPostBySlug(slug: string) {
 
   const { data, content } = matter(fileContents);
 
-  const source = await renderToString(content);
+  const source = await renderToString(content, { components: mdxComponents });
 
   return {
     slug,
