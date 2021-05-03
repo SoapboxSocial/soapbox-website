@@ -37,15 +37,9 @@ export default function HomePage() {
                     </Link>
                   </li>
 
-                  <li>
+                  <li className="hidden sm:block">
                     <a href={HELLO_URL} className="text-white lg:text-sm">
                       Contact
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href={MEDIA_KIT_URL} className="text-white lg:text-sm">
-                      Media Kit
                     </a>
                   </li>
 
