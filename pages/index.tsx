@@ -3,7 +3,13 @@ import Link from "next/link";
 import { Fragment } from "react";
 import AppStoreButton from "../components/app-store-button";
 import Meta from "../components/meta";
-
+import {
+  HELLO_URL,
+  INSTAGRAM_URL,
+  MEDIA_KIT_URL,
+  TWITTER_URL,
+} from "../constants";
+import { Instagram, Twitter } from "react-feather";
 export default function HomePage() {
   return (
     <Fragment>
@@ -24,9 +30,37 @@ export default function HomePage() {
               </li>
 
               <li>
-                <Link href="/blog">
-                  <a className="text-white lg:text-sm">Blog</a>
-                </Link>
+                <ul className="flex items-center space-x-4">
+                  <li>
+                    <Link href="/blog">
+                      <a className="text-white lg:text-sm">Blog</a>
+                    </Link>
+                  </li>
+
+                  <li>
+                    <a href={HELLO_URL} className="text-white lg:text-sm">
+                      Contact
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href={MEDIA_KIT_URL} className="text-white lg:text-sm">
+                      Media Kit
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href={INSTAGRAM_URL} className="text-white lg:text-sm">
+                      <Instagram />
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href={TWITTER_URL} className="text-white lg:text-sm">
+                      <Twitter />
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </nav>

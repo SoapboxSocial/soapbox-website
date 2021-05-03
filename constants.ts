@@ -19,3 +19,5 @@ export const FATHOM_EVENTS = {
   "Clicked AppStore Link (Home)": "NUSYSEKO",
   "Clicked AppStore Link (Blog)": "4TQDI5BM",
 };
+
+export const INSTAGRAM_URL = "http://instagram.com/soapbox.social";
