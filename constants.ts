@@ -3,6 +3,8 @@ export const APP_STORE_URL =
 
 export const CONTACT_URL = "mailto:support@soapbox.social";
 
+export const HELLO_URL = "mailto:hello@soapbox.social";
+
 export const APP_ID = "1529283270";
 
 export const APP_NAME = "Soapbox: Talk with anyone";

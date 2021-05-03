@@ -1,15 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Fragment } from "react";
+import { Instagram, Twitter } from "react-feather";
 import AppStoreButton from "../components/app-store-button";
 import Meta from "../components/meta";
-import {
-  HELLO_URL,
-  INSTAGRAM_URL,
-  MEDIA_KIT_URL,
-  TWITTER_URL,
-} from "../constants";
-import { Instagram, Twitter } from "react-feather";
+import { HELLO_URL, INSTAGRAM_URL, TWITTER_URL } from "../constants";
 export default function HomePage() {
   return (
     <Fragment>
