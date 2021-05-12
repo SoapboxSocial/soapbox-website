@@ -36,7 +36,7 @@ export default function Post({ slug, meta, source }: Props) {
         description={meta.summary}
         url={`https://soapbox.social/blog/${slug}`}
         image={`https://soapbox.social${meta?.thumb ?? "/thumb.jpg"}`}
-        twitterCardType="summary_large_image"
+        twitterCardType={meta?.thumb ? "summary_large_image" : "summary"}
       />
 
       <div className="h-8" />
