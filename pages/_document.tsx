@@ -65,8 +65,8 @@ export default class SoapboxDocument extends Document {
                 "https://apps.apple.com/us/app/soapbox-talk-with-anyone/id1529283270",
               aggregateRating: {
                 "@type": "AggregateRating",
-                ratingValue: "4.8",
-                ratingCount: 98,
+                ratingValue: "4.73",
+                ratingCount: 163,
               },
             })}
           />
