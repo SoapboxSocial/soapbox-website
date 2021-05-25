@@ -5,7 +5,11 @@ import { Instagram, Twitter } from "react-feather";
 import AppStoreButton from "../components/app-store-button";
 import Meta from "../components/meta";
 import { HELLO_URL, INSTAGRAM_URL, TWITTER_URL } from "../constants";
-export default function HomePage() {
+import useiPhoneRedirect from "../hooks/useiPhoneRedirect";
+
+function HomePage() {
+  useiPhoneRedirect();
+
   return (
     <Fragment>
       <Meta />
@@ -141,3 +145,5 @@ export default function HomePage() {
     </Fragment>
   );
 }
+
+export default HomePage;
